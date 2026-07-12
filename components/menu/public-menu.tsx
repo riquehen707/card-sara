@@ -28,14 +28,6 @@ export function PublicMenu({
       return products;
     }
 
-    if (activeCategoryId === "promocoes") {
-      return products.filter((product) => product.isPromotional);
-    }
-
-    if (activeCategoryId === "novidades") {
-      return products.filter((product) => product.isNew);
-    }
-
     return products.filter((product) => product.categoryId === activeCategoryId);
   }, [activeCategoryId, products]);
 

@@ -25,14 +25,6 @@ export function getProductsByCategory(categoryId: string) {
     return products;
   }
 
-  if (categoryId === "promocoes") {
-    return products.filter((product) => product.isPromotional);
-  }
-
-  if (categoryId === "novidades") {
-    return products.filter((product) => product.isNew);
-  }
-
   return products.filter((product) => product.categoryId === categoryId);
 }
 

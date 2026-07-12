@@ -119,14 +119,9 @@ function formatPriceInput(value: number | null) {
 }
 
 function getImageForCategory(categoryId: string) {
-  if (categoryId === "bebidas") return "/mock/bebida.svg";
-  if (categoryId === "sobremesas" || categoryId === "novidades") {
-    return "/mock/sobremesa.svg";
-  }
-  if (categoryId === "pratos") return "/mock/prato.svg";
-  if (categoryId === "promocoes") return "/mock/combo.svg";
+  void categoryId;
 
-  return "/mock/lanche.svg";
+  return "/mock/placeholder.svg";
 }
 
 function createInitialDraft(menuData: MenuData): DraftMenuData {

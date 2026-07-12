@@ -1,0 +1,17 @@
+<svg width="320" height="240" viewBox="0 0 320 240" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Imagem do produto</title>
+  <desc id="desc">Placeholder neutro para itens do cardápio</desc>
+  <rect width="320" height="240" rx="18" fill="#F4F4F5"/>
+  <rect x="1" y="1" width="318" height="238" rx="17" stroke="#E4E4E7" stroke-width="2"/>
+  <circle cx="150" cy="120" r="43" fill="#FFFFFF" stroke="#D4D4D8" stroke-width="6"/>
+  <circle cx="150" cy="120" r="25" stroke="#E4E4E7" stroke-width="4"/>
+  <path d="M218 73V167" stroke="#A1A1AA" stroke-width="8" stroke-linecap="round"/>
+  <path d="M199 75V111C199 119 204 126 212 128V167" stroke="#A1A1AA" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M80 73V167" stroke="#A1A1AA" stroke-width="8" stroke-linecap="round"/>
+  <path d="M66 75V107" stroke="#A1A1AA" stroke-width="6" stroke-linecap="round"/>
+  <path d="M80 75V107" stroke="#A1A1AA" stroke-width="6" stroke-linecap="round"/>
+  <path d="M94 75V107" stroke="#A1A1AA" stroke-width="6" stroke-linecap="round"/>
+  <path d="M66 108C66 118 72 126 80 128C88 126 94 118 94 108" stroke="#A1A1AA" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M110 188H210" stroke="#D4D4D8" stroke-width="8" stroke-linecap="round"/>
+  <path d="M128 205H192" stroke="#E4E4E7" stroke-width="6" stroke-linecap="round"/>
+</svg>
