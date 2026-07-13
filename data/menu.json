@@ -288,7 +288,29 @@
       "portion": "300g",
       "imageUrl": "/mock/placeholder.svg",
       "imageAlt": "Picanha (300g)",
-      "available": true
+      "available": true,
+      "accompaniments": [
+        {
+          "id": "picanha-300g-arroz",
+          "name": "Arroz",
+          "included": true
+        },
+        {
+          "id": "picanha-300g-batata",
+          "name": "Batata",
+          "included": true
+        },
+        {
+          "id": "picanha-300g-farofa",
+          "name": "Farofa",
+          "included": true
+        },
+        {
+          "id": "picanha-300g-salada",
+          "name": "Salada",
+          "included": true
+        }
+      ]
     },
     {
       "id": "ancho-300g",
@@ -302,7 +324,29 @@
       "portion": "300g",
       "imageUrl": "/mock/placeholder.svg",
       "imageAlt": "Ancho (300g)",
-      "available": true
+      "available": true,
+      "accompaniments": [
+        {
+          "id": "ancho-300g-batata",
+          "name": "Batata",
+          "included": true
+        },
+        {
+          "id": "ancho-300g-arroz",
+          "name": "Arroz",
+          "included": true
+        },
+        {
+          "id": "ancho-300g-farofa",
+          "name": "Farofa",
+          "included": true
+        },
+        {
+          "id": "ancho-300g-salada",
+          "name": "Salada",
+          "included": true
+        }
+      ]
     },
     {
       "id": "carne-sol-queijo-coalho",
@@ -316,7 +360,29 @@
       "portion": "Prato",
       "imageUrl": "/mock/placeholder.svg",
       "imageAlt": "Carne de Sol com Queijo Coalho",
-      "available": true
+      "available": true,
+      "accompaniments": [
+        {
+          "id": "carne-sol-queijo-coalho-arroz",
+          "name": "Arroz",
+          "included": true
+        },
+        {
+          "id": "carne-sol-queijo-coalho-salada",
+          "name": "Salada",
+          "included": true
+        },
+        {
+          "id": "carne-sol-queijo-coalho-farofa",
+          "name": "Farofa",
+          "included": true
+        },
+        {
+          "id": "carne-sol-queijo-coalho-batata",
+          "name": "Batata",
+          "included": true
+        }
+      ]
     },
     {
       "id": "file-molho-formaggi",
@@ -330,7 +396,14 @@
       "portion": "Prato",
       "imageUrl": "/mock/placeholder.svg",
       "imageAlt": "Filé ao Molho Formaggi",
-      "available": true
+      "available": true,
+      "accompaniments": [
+        {
+          "id": "file-molho-formaggi-torradas-artesanais",
+          "name": "Torradas artesanais",
+          "included": true
+        }
+      ]
     },
     {
       "id": "carre-cordeiro",
@@ -344,7 +417,19 @@
       "portion": "Prato",
       "imageUrl": "/mock/placeholder.svg",
       "imageAlt": "Carré de Cordeiro",
-      "available": true
+      "available": true,
+      "accompaniments": [
+        {
+          "id": "carre-cordeiro-pure-abobora",
+          "name": "Purê de abóbora",
+          "included": true
+        },
+        {
+          "id": "carre-cordeiro-salada",
+          "name": "Salada",
+          "included": true
+        }
+      ]
     },
     {
       "id": "file-parmegiana",
@@ -372,7 +457,24 @@
       "portion": "Prato",
       "imageUrl": "/mock/placeholder.svg",
       "imageAlt": "Salmão Grelhado",
-      "available": true
+      "available": true,
+      "accompaniments": [
+        {
+          "id": "salmao-grelhado-pure-batata",
+          "name": "Purê de batata",
+          "included": true
+        },
+        {
+          "id": "salmao-grelhado-arroz",
+          "name": "Arroz",
+          "included": true
+        },
+        {
+          "id": "salmao-grelhado-salada",
+          "name": "Salada",
+          "included": true
+        }
+      ]
     },
     {
       "id": "nhoque-pomodoro",
