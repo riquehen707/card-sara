@@ -1,11 +1,11 @@
 {
   "establishment": {
-    "name": "Cardápio Sara",
-    "headline": "Comida simples, bem feita e pronta para o dia a dia.",
-    "description": "Lanches, pratos e sobremesas preparados com ingredientes selecionados, porções generosas e atendimento direto.",
-    "address": "Rua das Flores, 120 - Centro",
-    "phone": "(11) 99999-0000",
-    "hours": "Segunda a sábado, das 10h às 22h"
+    "name": "Formaggi",
+    "headline": "Artisan pizzeria com forno a lenha, massas e clássicos da casa.",
+    "description": "Pizzas, calzones, entradas, pratos e destilados em um cardápio elegante, direto e fácil de consultar.",
+    "address": "Endereço do restaurante",
+    "phone": "(71) 99735-6799",
+    "hours": "Consulte o funcionamento no atendimento"
   },
   "categories": [
     {

@@ -39,7 +39,7 @@ export default async function ProductDetailsPage({
 
   return (
     <>
-      <header className="sticky top-0 z-30 border-b bg-background/95">
+      <header className="sticky top-0 z-30 border-b border-primary/25 bg-background">
         <div className="menu-readable grid h-14 grid-cols-[44px_1fr_44px] items-center gap-2 px-4">
           <Button
             asChild
@@ -61,7 +61,7 @@ export default async function ProductDetailsPage({
 
       <main className="menu-readable flex-1 px-4 pb-10">
         <article className="space-y-5 py-5">
-          <div className="relative aspect-[4/3] overflow-hidden rounded-xl border bg-secondary">
+          <div className="relative aspect-[4/3] overflow-hidden rounded-xl border border-primary/25 bg-secondary">
             <Image
               src={product.imageUrl}
               alt={product.imageAlt}
@@ -81,7 +81,7 @@ export default async function ProductDetailsPage({
                 {product.name}
               </h1>
               <div className="flex flex-wrap items-baseline gap-2">
-                <span className="text-xl font-semibold text-foreground">
+                <span className="text-xl font-semibold text-primary">
                   {formatCurrency(product.promotionalPrice ?? product.price)}
                 </span>
                 {product.promotionalPrice !== undefined &&
@@ -131,7 +131,7 @@ export default async function ProductDetailsPage({
                 {product.accompaniments.map((accompaniment) => (
                   <li
                     key={accompaniment.id}
-                    className="flex min-h-11 items-center justify-between rounded-lg border px-3"
+                    className="flex min-h-11 items-center justify-between rounded-lg border border-primary/20 px-3"
                   >
                     <span>{accompaniment.name}</span>
                     {accompaniment.included && (

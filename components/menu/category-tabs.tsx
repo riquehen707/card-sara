@@ -35,7 +35,7 @@ export function CategoryTabs({
                 "inline-flex h-11 items-center rounded-full border px-4 text-sm font-medium outline-none transition-colors focus-visible:ring-[3px] focus-visible:ring-ring/50",
                 isActive
                   ? "border-primary bg-primary text-primary-foreground"
-                  : "border-border bg-background text-muted-foreground hover:bg-secondary hover:text-foreground"
+                  : "border-primary/25 bg-card text-muted-foreground hover:border-primary/60 hover:bg-secondary hover:text-foreground"
               )}
               aria-pressed={isActive}
             >

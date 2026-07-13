@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useMemo, useState } from "react";
 
 import { PublicHeader } from "@/components/layout/public-header";
@@ -69,13 +70,28 @@ export function PublicMenu({
 
       <main className="menu-readable flex-1 px-4 pb-10">
         <section className="py-5" aria-labelledby="restaurant-title">
-          <div className="rounded-xl border bg-card p-4 shadow-xs">
-            <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
-              Aberto hoje
-            </p>
+          <div className="rounded-xl border border-primary/35 bg-card/90 p-5 shadow-[0_18px_60px_rgba(0,0,0,0.35)]">
+            <div className="flex items-center gap-4">
+              <Image
+                src="/brand/formaggi_logo_vertical.svg"
+                alt="Formaggi Artisan Pizzeria"
+                width={132}
+                height={61}
+                className="h-auto w-32 shrink-0"
+                priority
+              />
+              <div className="min-w-0">
+                <p className="text-xs font-medium uppercase tracking-[0.16em] text-primary">
+                  Artisan Pizzeria
+                </p>
+                <p className="mt-1 text-sm text-muted-foreground">
+                  Forno a lenha, massas e clássicos da casa
+                </p>
+              </div>
+            </div>
             <h1
               id="restaurant-title"
-              className="mt-2 text-2xl font-semibold leading-8 text-foreground"
+              className="mt-5 text-2xl font-semibold leading-8 text-foreground"
             >
               {establishment.headline}
             </h1>
@@ -84,7 +100,7 @@ export function PublicMenu({
             </p>
             <dl
               id="informacoes"
-              className="mt-4 grid gap-2 border-t pt-4 text-sm"
+              className="mt-4 grid gap-2 border-t border-primary/20 pt-4 text-sm"
             >
               <div className="flex justify-between gap-4">
                 <dt className="text-muted-foreground">Horário</dt>
@@ -111,7 +127,7 @@ export function PublicMenu({
         <section className="space-y-4" aria-labelledby="menu-title">
           <div className="flex items-end justify-between gap-4">
             <div>
-              <h2 id="menu-title" className="text-lg font-semibold">
+              <h2 id="menu-title" className="text-lg font-semibold text-primary">
                 Cardápio
               </h2>
               <p className="mt-1 text-sm text-muted-foreground">
@@ -128,7 +144,7 @@ export function PublicMenu({
 
           <div id="produtos" className="scroll-mt-20 space-y-3">
             <div className="flex items-center justify-between gap-3">
-              <h3 className="text-sm font-semibold text-foreground">
+              <h3 className="text-sm font-semibold text-primary">
                 {activeCategoryName}
               </h3>
               <span className="text-xs text-muted-foreground">

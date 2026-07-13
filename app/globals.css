@@ -49,39 +49,39 @@
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #141414;
-  --card: #ffffff;
-  --card-foreground: #141414;
-  --popover: #ffffff;
-  --popover-foreground: #141414;
-  --primary: #242424;
-  --primary-foreground: #ffffff;
-  --secondary: #f6f6f6;
-  --secondary-foreground: #242424;
-  --muted: #f6f6f6;
-  --muted-foreground: #6f6f6f;
-  --accent: #242424;
-  --accent-foreground: #ffffff;
+  --background: #080909;
+  --foreground: #f6ecd2;
+  --card: #11100d;
+  --card-foreground: #f8efd8;
+  --popover: #11100d;
+  --popover-foreground: #f8efd8;
+  --primary: #d6b15a;
+  --primary-foreground: #090806;
+  --secondary: #19140b;
+  --secondary-foreground: #f3dfad;
+  --muted: #171717;
+  --muted-foreground: #b8aa88;
+  --accent: #d6b15a;
+  --accent-foreground: #090806;
   --destructive: #dc2626;
-  --border: #e7e7e7;
-  --input: #dedede;
-  --ring: #a3a3a3;
-  --chart-1: #ededed;
-  --chart-2: #d4d4d4;
-  --chart-3: #a3a3a3;
-  --chart-4: #737373;
-  --chart-5: #404040;
+  --border: #342915;
+  --input: #4a3a1d;
+  --ring: #d6b15a;
+  --chart-1: #d6b15a;
+  --chart-2: #f3dfad;
+  --chart-3: #8f7435;
+  --chart-4: #3a2c12;
+  --chart-5: #f8efd8;
   --radius: 0.7rem;
   --menu-readable-width: 30rem;
-  --sidebar: #fafafa;
-  --sidebar-foreground: #141414;
-  --sidebar-primary: #242424;
-  --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #f6f6f6;
-  --sidebar-accent-foreground: #242424;
-  --sidebar-border: #e7e7e7;
-  --sidebar-ring: #a3a3a3;
+  --sidebar: #0d0d0c;
+  --sidebar-foreground: #f8efd8;
+  --sidebar-primary: #d6b15a;
+  --sidebar-primary-foreground: #090806;
+  --sidebar-accent: #19140b;
+  --sidebar-accent-foreground: #f3dfad;
+  --sidebar-border: #342915;
+  --sidebar-ring: #d6b15a;
 }
 
 @layer base {
@@ -95,6 +95,7 @@
 
   body {
     @apply min-h-full bg-background text-foreground;
+    background: var(--background);
     text-rendering: optimizeLegibility;
   }
 
@@ -119,8 +120,8 @@
   }
 
   ::selection {
-    background: var(--secondary);
-    color: var(--foreground);
+    background: var(--primary);
+    color: var(--primary-foreground);
   }
 
   .menu-readable {

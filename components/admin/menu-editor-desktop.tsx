@@ -678,7 +678,7 @@ export function MenuEditorDesktop({
             <div>
               <h1 className="text-sm font-semibold">Administração</h1>
               <p className="text-xs text-muted-foreground">
-                Cardápio Sara
+                Formaggi
               </p>
             </div>
           </div>

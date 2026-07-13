@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { MenuIcon, SearchIcon } from "lucide-react";
 
@@ -19,8 +20,8 @@ export function PublicHeader({
   onCategorySelect,
 }: PublicHeaderProps) {
   return (
-    <header className="sticky top-0 z-30 border-b bg-background/95">
-      <div className="menu-readable grid h-14 grid-cols-[44px_1fr_44px] items-center gap-2 px-4">
+    <header className="sticky top-0 z-30 border-b border-primary/25 bg-background">
+      <div className="menu-readable grid h-16 grid-cols-[44px_1fr_44px] items-center gap-2 px-4">
         <MenuSheet
           categories={categories}
           onCategorySelect={onCategorySelect}
@@ -38,9 +39,17 @@ export function PublicHeader({
 
         <Link
           href="/"
-          className="truncate text-center text-sm font-semibold tracking-wide text-foreground outline-none focus-visible:rounded-md focus-visible:ring-[3px] focus-visible:ring-ring/50"
+          className="mx-auto flex min-w-0 items-center justify-center gap-2 truncate text-center text-sm font-semibold tracking-wide text-primary outline-none focus-visible:rounded-md focus-visible:ring-[3px] focus-visible:ring-ring/50"
         >
-          {establishmentName}
+          <Image
+            src="/brand/formaggi_logo_vertical.svg"
+            alt=""
+            width={36}
+            height={36}
+            className="size-9 shrink-0 rounded-full"
+            priority
+          />
+          <span className="truncate">{establishmentName}</span>
         </Link>
 
         <Button

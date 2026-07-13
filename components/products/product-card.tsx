@@ -20,7 +20,7 @@ export function ProductCard({ product, onSelect, href }: ProductCardProps) {
       : null;
   const content = (
     <>
-      <div className="relative h-24 w-28 shrink-0 overflow-hidden rounded-lg bg-secondary sm:h-28 sm:w-32">
+      <div className="relative h-24 w-28 shrink-0 overflow-hidden rounded-lg border border-primary/20 bg-secondary sm:h-28 sm:w-32">
         <Image
           src={product.imageUrl}
           alt={product.imageAlt}
@@ -59,7 +59,7 @@ export function ProductCard({ product, onSelect, href }: ProductCardProps) {
           <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
             {product.promotionalPrice !== undefined ? (
               <>
-                <span className="text-sm font-semibold text-foreground">
+                <span className="text-sm font-semibold text-primary">
                   {formatCurrency(product.promotionalPrice)}
                 </span>
                 {product.price !== null && (
@@ -69,7 +69,7 @@ export function ProductCard({ product, onSelect, href }: ProductCardProps) {
                 )}
               </>
             ) : (
-              <span className="text-sm font-semibold text-foreground">
+              <span className="text-sm font-semibold text-primary">
                 {formatCurrency(product.price)}
               </span>
             )}
@@ -85,8 +85,8 @@ export function ProductCard({ product, onSelect, href }: ProductCardProps) {
   );
 
   const className = cn(
-    "flex w-full gap-3 rounded-xl border bg-card p-3 text-left shadow-xs outline-none transition-colors focus-visible:ring-[3px] focus-visible:ring-ring/50",
-    product.available ? "hover:bg-secondary/50" : "opacity-70"
+    "flex w-full gap-3 rounded-xl border border-primary/20 bg-card/95 p-3 text-left shadow-xs outline-none transition-colors focus-visible:ring-[3px] focus-visible:ring-ring/50",
+    product.available ? "hover:border-primary/45 hover:bg-secondary/70" : "opacity-70"
   );
 
   if (href && !onSelect) {

@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Cardápio Sara",
-  description: "Cardápio digital",
+  title: "Formaggi",
+  description: "Cardápio digital da Formaggi Artisan Pizzeria",
 };
 
 export default function RootLayout({

@@ -49,7 +49,7 @@ function useIsDesktop() {
 function QuickViewContent({ product }: { product: Product }) {
   return (
     <>
-      <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl bg-secondary">
+      <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl border border-primary/25 bg-secondary">
         <Image
           src={product.imageUrl}
           alt={product.imageAlt}
@@ -69,7 +69,7 @@ function QuickViewContent({ product }: { product: Product }) {
         </div>
 
         <div className="flex flex-wrap items-baseline gap-2">
-          <span className="text-lg font-semibold text-foreground">
+          <span className="text-lg font-semibold text-primary">
             {formatCurrency(product.promotionalPrice ?? product.price)}
           </span>
           {product.promotionalPrice !== undefined && product.price !== null && (

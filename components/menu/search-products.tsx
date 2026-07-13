@@ -54,7 +54,7 @@ export function SearchProducts({ products }: SearchProductsProps) {
 
   return (
     <>
-      <header className="sticky top-0 z-30 border-b bg-background/95">
+      <header className="sticky top-0 z-30 border-b border-primary/25 bg-background">
         <div className="menu-readable grid h-14 grid-cols-[44px_1fr_44px] items-center gap-2 px-4">
           <Button
             asChild
