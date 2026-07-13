@@ -71,31 +71,26 @@ export function PublicMenu({
       <main className="menu-readable flex-1 px-4 pb-10">
         <section className="py-5" aria-labelledby="restaurant-title">
           <div className="rounded-xl border border-primary/35 bg-card/90 p-5 shadow-[0_18px_60px_rgba(0,0,0,0.35)]">
-            <div className="flex items-center gap-4">
+            <div className="flex justify-center">
               <Image
                 src="/brand/formaggi_logo_vertical.svg"
-                alt="Formaggi Artisan Pizzeria"
-                width={132}
-                height={61}
-                className="h-auto w-32 shrink-0"
+                alt="Formaggi"
+                width={220}
+                height={101}
+                className="h-auto w-48 max-w-full"
                 priority
               />
-              <div className="min-w-0">
-                <p className="text-xs font-medium uppercase tracking-[0.16em] text-primary">
-                  Artisan Pizzeria
-                </p>
-                <p className="mt-1 text-sm text-muted-foreground">
-                  Forno a lenha, massas e clássicos da casa
-                </p>
-              </div>
             </div>
             <h1
               id="restaurant-title"
-              className="mt-5 text-2xl font-semibold leading-8 text-foreground"
+              className="mt-5 text-center text-2xl font-semibold leading-8 text-foreground"
             >
               {establishment.headline}
             </h1>
-            <p className="mt-3 text-sm leading-6 text-muted-foreground">
+            <p
+              id="sobre"
+              className="mt-3 text-center text-sm leading-6 text-muted-foreground"
+            >
               {establishment.description}
             </p>
             <dl
@@ -112,12 +107,6 @@ export function PublicMenu({
                 <dt className="text-muted-foreground">Contato</dt>
                 <dd id="fale-conosco" className="font-medium text-foreground">
                   {establishment.phone}
-                </dd>
-              </div>
-              <div className="flex justify-between gap-4">
-                <dt className="text-muted-foreground">Endereço</dt>
-                <dd id="sobre" className="text-right font-medium text-foreground">
-                  {establishment.address}
                 </dd>
               </div>
             </dl>

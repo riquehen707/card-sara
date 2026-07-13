@@ -4,7 +4,7 @@ export const establishmentSchema = z.object({
   name: z.string().min(1),
   headline: z.string().min(1),
   description: z.string().min(1),
-  address: z.string().min(1),
+  address: z.string().optional(),
   phone: z.string().min(1),
   hours: z.string().min(1),
 });

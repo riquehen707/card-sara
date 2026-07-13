@@ -1,17 +1,9 @@
 <svg width="320" height="240" viewBox="0 0 320 240" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">Imagem do produto</title>
-  <desc id="desc">Placeholder neutro para itens do cardápio</desc>
-  <rect width="320" height="240" rx="18" fill="#0B0B0A"/>
-  <rect x="1" y="1" width="318" height="238" rx="17" stroke="#6F5722" stroke-width="2"/>
-  <circle cx="150" cy="120" r="43" fill="#15120A" stroke="#D6B15A" stroke-width="5"/>
-  <circle cx="150" cy="120" r="25" stroke="#6F5722" stroke-width="4"/>
-  <path d="M218 73V167" stroke="#D6B15A" stroke-width="8" stroke-linecap="round"/>
-  <path d="M199 75V111C199 119 204 126 212 128V167" stroke="#D6B15A" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M80 73V167" stroke="#D6B15A" stroke-width="8" stroke-linecap="round"/>
-  <path d="M66 75V107" stroke="#B88E3B" stroke-width="6" stroke-linecap="round"/>
-  <path d="M80 75V107" stroke="#B88E3B" stroke-width="6" stroke-linecap="round"/>
-  <path d="M94 75V107" stroke="#B88E3B" stroke-width="6" stroke-linecap="round"/>
-  <path d="M66 108C66 118 72 126 80 128C88 126 94 118 94 108" stroke="#B88E3B" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M110 188H210" stroke="#6F5722" stroke-width="8" stroke-linecap="round"/>
-  <path d="M128 205H192" stroke="#342915" stroke-width="6" stroke-linecap="round"/>
+  <desc id="desc">Placeholder neutro para itens do cardapio</desc>
+  <rect width="320" height="240" rx="0" fill="#F1F2F3"/>
+  <g transform="translate(88 67)" fill="#89929A">
+    <path d="M10 0H134C139.523 0 144 4.47715 144 10V96C144 101.523 139.523 106 134 106H10C4.47715 106 0 101.523 0 96V10C0 4.47715 4.47715 0 10 0ZM10 10V78.2548L47.1751 38.7437C49.1448 36.6503 52.4734 36.6503 54.4431 38.7437L84.5725 70.7624L112.267 43.9221C114.228 42.0214 117.35 42.0356 119.294 43.9541L134 58.4629V10H10ZM134 72.5101L115.733 54.4854L88.055 81.3091C86.0898 83.2138 82.9597 83.1941 81.0186 81.2648L50.8091 49.1611L10 92.5304V96H134V72.5101Z"/>
+    <circle cx="96" cy="29" r="13"/>
+  </g>
 </svg>
