@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { MenuIcon, SearchIcon } from "lucide-react";
 
@@ -9,13 +8,11 @@ import { MenuSheet } from "@/components/menu/menu-sheet";
 import type { Category } from "@/types/menu";
 
 type PublicHeaderProps = {
-  establishmentName: string;
   categories: Category[];
   onCategorySelect?: (categoryId: string) => void;
 };
 
 export function PublicHeader({
-  establishmentName,
   categories,
   onCategorySelect,
 }: PublicHeaderProps) {
@@ -37,20 +34,7 @@ export function PublicHeader({
           </Button>
         </MenuSheet>
 
-        <Link
-          href="/"
-          className="mx-auto flex min-w-0 items-center justify-center gap-2 truncate text-center text-sm font-semibold tracking-wide text-primary outline-none focus-visible:rounded-md focus-visible:ring-[3px] focus-visible:ring-ring/50"
-        >
-          <Image
-            src="/brand/formaggi_logo_vertical.svg"
-            alt=""
-            width={36}
-            height={36}
-            className="size-9 shrink-0 rounded-full"
-            priority
-          />
-          <span className="truncate">{establishmentName}</span>
-        </Link>
+        <div aria-hidden="true" />
 
         <Button
           asChild

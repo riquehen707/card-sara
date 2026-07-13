@@ -63,7 +63,6 @@ export function PublicMenu({
   return (
     <>
       <PublicHeader
-        establishmentName={establishment.name}
         categories={categories}
         onCategorySelect={selectCategory}
       />
