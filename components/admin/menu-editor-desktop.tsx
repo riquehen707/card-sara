@@ -6,7 +6,6 @@ import {
   ArrowLeftIcon,
   CheckIcon,
   CopyIcon,
-  FilterIcon,
   LogOutIcon,
   PlusIcon,
   RotateCcwIcon,
@@ -72,7 +71,6 @@ type NewProductForm = {
 };
 
 type ProductStatusFilter = "todos" | "alterados" | "indisponiveis";
-type SortKey = "categoria" | "nome" | "preco";
 
 const draftStorageKey = "cardapio-sara-admin-draft-v1";
 const publishTokenStorageKey = "cardapio-sara-admin-publish-token";
@@ -172,13 +170,6 @@ function buildPublishMenuData(draft: DraftMenuData): MenuData {
         return publishProduct;
       }),
   };
-}
-
-function getCategoryName(categories: Category[], categoryId: string) {
-  return (
-    categories.find((category) => category.id === categoryId)?.name ??
-    "Sem categoria"
-  );
 }
 
 function getCategoryOrder(categories: Category[], categoryId: string) {
@@ -308,7 +299,6 @@ export function MenuEditorDesktop({
   const [categoryId, setCategoryId] = useState("todos");
   const [statusFilter, setStatusFilter] =
     useState<ProductStatusFilter>("todos");
-  const [sortKey, setSortKey] = useState<SortKey>("categoria");
   const [selectedProductId, setSelectedProductId] = useState(
     initialDraft.products[0]?.id ?? ""
   );
@@ -393,17 +383,6 @@ export function MenuEditorDesktop({
         return searchableText.includes(normalizedQuery);
       })
       .sort((firstProduct, secondProduct) => {
-        if (sortKey === "nome") {
-          return firstProduct.name.localeCompare(secondProduct.name, "pt-BR");
-        }
-
-        if (sortKey === "preco") {
-          return (
-            (firstProduct.price ?? Number.MAX_SAFE_INTEGER) -
-            (secondProduct.price ?? Number.MAX_SAFE_INTEGER)
-          );
-        }
-
         const categoryDifference =
           getCategoryOrder(draft.categories, firstProduct.categoryId) -
           getCategoryOrder(draft.categories, secondProduct.categoryId);
@@ -420,7 +399,6 @@ export function MenuEditorDesktop({
     draft.categories,
     draft.products,
     query,
-    sortKey,
     statusFilter,
   ]);
 
@@ -660,10 +638,10 @@ export function MenuEditorDesktop({
   }
 
   return (
-    <div className="min-h-dvh bg-secondary/40">
-      <header className="sticky top-0 z-30 border-b bg-background/95">
-        <div className="mx-auto flex h-14 w-full max-w-7xl items-center justify-between gap-4 px-4">
-          <div className="flex items-center gap-3">
+    <div className="min-h-dvh bg-secondary/30">
+      <header className="sticky top-0 z-30 border-b bg-background">
+        <div className="mx-auto flex min-h-20 w-full max-w-[1500px] items-center justify-between gap-6 px-6 py-3">
+          <div className="flex min-w-0 items-center gap-4">
             <Button
               asChild
               variant="ghost"
@@ -676,16 +654,80 @@ export function MenuEditorDesktop({
               </Link>
             </Button>
             <div>
-              <h1 className="text-sm font-semibold">Administração</h1>
-              <p className="text-xs text-muted-foreground">
+              <h1 className="text-xl font-semibold tracking-tight">
+                Administração
+              </h1>
+              <p className="mt-1 text-sm text-muted-foreground">
                 Formaggi
               </p>
             </div>
           </div>
-          <div className="flex items-center gap-2">
-            <Badge variant="outline" className="hidden md:inline-flex">
-              {draft.products.length} produtos
-            </Badge>
+          <div className="flex items-center gap-3">
+            <div
+              className={cn(
+                "hidden items-center gap-2 rounded-full border px-3 py-2 text-sm md:flex",
+                changeCount > 0
+                  ? "border-primary/40 bg-primary/10 text-primary"
+                  : "border-border text-muted-foreground"
+              )}
+            >
+              <span
+                className={cn(
+                  "size-2 rounded-full",
+                  changeCount > 0 ? "bg-primary" : "bg-muted-foreground"
+                )}
+                aria-hidden="true"
+              />
+              {changeCount > 0
+                ? `${changeCount} pendente${changeCount === 1 ? "" : "s"}`
+                : "Tudo publicado"}
+            </div>
+            <Input
+              type="password"
+              value={publishToken}
+              onChange={(event) => setPublishToken(event.target.value)}
+              placeholder="Chave"
+              aria-label="Chave de publicação"
+              className="h-10 w-28 md:w-40"
+            />
+            <AlertDialog>
+              <AlertDialogTrigger asChild>
+                <Button
+                  type="button"
+                  disabled={changeCount === 0 || hasPriceErrors || publishing}
+                >
+                  <SaveIcon className="size-4" aria-hidden="true" />
+                  Publicar
+                </Button>
+              </AlertDialogTrigger>
+              <AlertDialogContent>
+                <AlertDialogHeader>
+                  <AlertDialogTitle>
+                    Publicar alterações no cardápio?
+                  </AlertDialogTitle>
+                  <AlertDialogDescription>
+                    {changeCount === 1
+                      ? "1 alteração será publicada de uma vez."
+                      : `${changeCount} alterações serão publicadas de uma vez.`}
+                  </AlertDialogDescription>
+                </AlertDialogHeader>
+                <AlertDialogFooter>
+                  <AlertDialogCancel>Cancelar</AlertDialogCancel>
+                  <AlertDialogAction onClick={publishChanges}>
+                    <CheckIcon className="size-4" aria-hidden="true" />
+                    Confirmar
+                  </AlertDialogAction>
+                </AlertDialogFooter>
+              </AlertDialogContent>
+            </AlertDialog>
+            <Button
+              type="button"
+              variant="ghost"
+              onClick={discardChanges}
+              disabled={changeCount === 0 || publishing}
+            >
+              Descartar
+            </Button>
             <Button type="button" variant="ghost" size="sm" onClick={logout}>
               <LogOutIcon className="size-4" aria-hidden="true" />
               Sair
@@ -694,19 +736,21 @@ export function MenuEditorDesktop({
         </div>
       </header>
 
-      <main className="mx-auto grid w-full max-w-7xl gap-4 px-4 py-4 xl:grid-cols-[240px_minmax(0,1fr)_360px]">
-        <aside className="grid gap-4 xl:sticky xl:top-[72px] xl:self-start">
-          <section className="rounded-xl border bg-card p-3 shadow-xs">
-            <div className="mb-3 flex items-center justify-between">
-              <h2 className="text-sm font-semibold">Categorias</h2>
-              <FilterIcon className="size-4 text-muted-foreground" />
+      <main className="mx-auto grid w-full max-w-[1500px] gap-5 px-6 py-5 xl:grid-cols-[260px_minmax(0,1fr)_400px]">
+        <aside className="xl:sticky xl:top-[100px] xl:self-start">
+          <section className="rounded-xl border bg-card p-4 shadow-xs">
+            <div className="mb-4">
+              <h2 className="text-lg font-semibold">Categorias</h2>
+              <p className="mt-1 text-sm text-muted-foreground">
+                Escolha uma seção.
+              </p>
             </div>
-            <div className="grid gap-1">
+            <div className="grid gap-1.5">
               <button
                 type="button"
                 onClick={() => setCategoryId("todos")}
                 className={cn(
-                  "flex min-h-10 items-center justify-between rounded-lg px-3 text-left text-sm outline-none hover:bg-secondary focus-visible:ring-[3px] focus-visible:ring-ring/50",
+                  "flex min-h-11 items-center justify-between rounded-lg px-3 text-left text-sm outline-none hover:bg-secondary focus-visible:ring-[3px] focus-visible:ring-ring/50",
                   categoryId === "todos" && "bg-secondary font-medium"
                 )}
               >
@@ -721,7 +765,7 @@ export function MenuEditorDesktop({
                   type="button"
                   onClick={() => setCategoryId(category.id)}
                   className={cn(
-                    "flex min-h-10 items-center justify-between rounded-lg px-3 text-left text-sm outline-none hover:bg-secondary focus-visible:ring-[3px] focus-visible:ring-ring/50",
+                    "flex min-h-11 items-center justify-between rounded-lg px-3 text-left text-sm outline-none hover:bg-secondary focus-visible:ring-[3px] focus-visible:ring-ring/50",
                     categoryId === category.id && "bg-secondary font-medium"
                   )}
                 >
@@ -734,96 +778,78 @@ export function MenuEditorDesktop({
             </div>
           </section>
 
-          <section className="rounded-xl border bg-card p-3 shadow-xs">
-            <h2 className="mb-3 text-sm font-semibold">Filtros rápidos</h2>
-            <div className="grid gap-2">
-              {[
-                ["todos", "Todos", draft.products.length],
-                ["alterados", "Alterados", changedProductIds.size],
-                ["indisponiveis", "Indisponíveis", unavailableCount],
-              ].map(([value, label, count]) => (
-                <Button
-                  key={value}
-                  type="button"
-                  variant={statusFilter === value ? "secondary" : "ghost"}
-                  className="justify-between"
-                  onClick={() => setStatusFilter(value as ProductStatusFilter)}
-                >
-                  <span>{label}</span>
-                  <Badge variant="outline">{count}</Badge>
-                </Button>
-              ))}
-            </div>
-          </section>
         </aside>
 
         <section className="grid min-w-0 gap-4">
-          <section className="rounded-xl border bg-card p-4 shadow-xs">
-            <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+          <section className="rounded-xl border bg-card p-5 shadow-xs">
+            <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
               <div>
-                <h2 className="text-lg font-semibold">Produtos</h2>
+                <h2 className="text-2xl font-semibold tracking-tight">
+                  Produtos
+                </h2>
                 <p className="mt-1 text-sm text-muted-foreground">
-                  Edite preços na tabela e detalhes no painel lateral.
+                  Busque, altere preços e controle a disponibilidade.
                 </p>
               </div>
-              <Button onClick={() => setNewProductOpen(true)}>
+              <Button size="lg" onClick={() => setNewProductOpen(true)}>
                 <PlusIcon className="size-4" aria-hidden="true" />
                 Adicionar produto
               </Button>
             </div>
 
-            <div className="mt-4 grid gap-3 lg:grid-cols-[1fr_180px]">
+            <div className="mt-6 grid gap-3">
               <div className="relative">
                 <SearchIcon
-                  className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground"
+                  className="pointer-events-none absolute left-4 top-1/2 size-5 -translate-y-1/2 text-muted-foreground"
                   aria-hidden="true"
                 />
                 <Input
                   value={query}
                   onChange={(event) => setQuery(event.target.value)}
-                  placeholder="Buscar por produto ou descrição"
-                  className="pl-9"
+                  placeholder="Buscar produto pelo nome ou descrição"
+                  className="h-14 rounded-xl pl-12 text-base"
                   aria-label="Buscar produto"
                 />
               </div>
-              <Select
-                value={sortKey}
-                onValueChange={(value) => setSortKey(value as SortKey)}
-              >
-                <SelectTrigger aria-label="Ordenar produtos">
-                  <SelectValue placeholder="Ordenar" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="categoria">Categoria</SelectItem>
-                  <SelectItem value="nome">Nome</SelectItem>
-                  <SelectItem value="preco">Preço</SelectItem>
-                </SelectContent>
-              </Select>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  ["todos", "Todos", draft.products.length],
+                  ["alterados", "Alterados", changedProductIds.size],
+                  ["indisponiveis", "Indisponíveis", unavailableCount],
+                ].map(([value, label, count]) => (
+                  <Button
+                    key={value}
+                    type="button"
+                    variant={statusFilter === value ? "secondary" : "ghost"}
+                    className="h-9 rounded-full px-3"
+                    onClick={() => setStatusFilter(value as ProductStatusFilter)}
+                  >
+                    <span>{label}</span>
+                    <Badge variant="outline">{count}</Badge>
+                  </Button>
+                ))}
+              </div>
+              {publishMessage && (
+                <p className="rounded-lg bg-secondary/60 px-3 py-2 text-sm text-muted-foreground">
+                  {publishMessage}
+                </p>
+              )}
             </div>
           </section>
 
           <section className="overflow-hidden rounded-xl border bg-card shadow-xs">
-            <div className="max-h-[calc(100dvh-250px)] min-h-[420px] overflow-auto">
-              <table className="w-full min-w-[760px] text-sm">
+            <div className="max-h-[calc(100dvh-285px)] min-h-[500px] overflow-auto">
+              <table className="w-full min-w-[640px] text-base">
                 <thead className="sticky top-0 z-10 border-b bg-secondary/95 text-xs text-muted-foreground">
                   <tr>
-                    <th className="w-[36%] px-3 py-3 text-left font-medium">
+                    <th className="px-5 py-4 text-left font-medium">
                       Produto
                     </th>
-                    <th className="px-3 py-3 text-left font-medium">
-                      Categoria
-                    </th>
-                    <th className="w-36 px-3 py-3 text-left font-medium">
+                    <th className="w-44 px-5 py-4 text-left font-medium">
                       Preço
                     </th>
-                    <th className="w-32 px-3 py-3 text-left font-medium">
+                    <th className="w-36 px-5 py-4 text-left font-medium">
                       Disponível
-                    </th>
-                    <th className="w-28 px-3 py-3 text-left font-medium">
-                      Status
-                    </th>
-                    <th className="w-24 px-3 py-3 text-right font-medium">
-                      Ações
                     </th>
                   </tr>
                 </thead>
@@ -831,8 +857,8 @@ export function MenuEditorDesktop({
                   {visibleProducts.length === 0 ? (
                     <tr>
                       <td
-                        colSpan={6}
-                        className="px-3 py-12 text-center text-sm text-muted-foreground"
+                        colSpan={3}
+                        className="px-5 py-14 text-center text-sm text-muted-foreground"
                       >
                         Nenhum produto encontrado.
                       </td>
@@ -858,24 +884,27 @@ export function MenuEditorDesktop({
                             product.removed && "opacity-55"
                           )}
                         >
-                          <td className="px-3 py-2">
+                          <td className="px-5 py-4">
                             <button
                               type="button"
                               onClick={() => setSelectedProductId(product.id)}
                               className="grid w-full gap-1 rounded-md text-left outline-none focus-visible:ring-[3px] focus-visible:ring-ring/50"
                             >
-                              <span className="font-medium text-foreground">
-                                {product.name}
+                              <span className="flex items-center gap-2 text-base font-semibold text-foreground">
+                                {changeState !== "unchanged" && (
+                                  <span
+                                    className="size-2.5 rounded-full bg-primary"
+                                    aria-label={`${getStatusLabel(changeState)} não publicado`}
+                                  />
+                                )}
+                                <span>{product.name}</span>
                               </span>
-                              <span className="line-clamp-1 text-xs text-muted-foreground">
+                              <span className="line-clamp-2 text-sm leading-5 text-muted-foreground">
                                 {product.description}
                               </span>
                             </button>
                           </td>
-                          <td className="px-3 py-2 text-muted-foreground">
-                            {getCategoryName(draft.categories, product.categoryId)}
-                          </td>
-                          <td className="px-3 py-2">
+                          <td className="px-5 py-4">
                             <Input
                               inputMode="decimal"
                               value={priceInputs[product.id] ?? ""}
@@ -885,7 +914,7 @@ export function MenuEditorDesktop({
                               aria-label={`Preço de ${product.name}`}
                               aria-invalid={Boolean(priceError)}
                               disabled={product.removed}
-                              className="h-9"
+                              className="h-11 text-base"
                             />
                             <p
                               className={cn(
@@ -898,7 +927,7 @@ export function MenuEditorDesktop({
                               {priceError ?? formatCurrency(product.price)}
                             </p>
                           </td>
-                          <td className="px-3 py-2">
+                          <td className="px-5 py-4">
                             <div className="flex items-center gap-2">
                               <Switch
                                 checked={product.available}
@@ -916,41 +945,6 @@ export function MenuEditorDesktop({
                               </span>
                             </div>
                           </td>
-                          <td className="px-3 py-2">
-                            <Badge
-                              variant={
-                                changeState === "unchanged"
-                                  ? "secondary"
-                                  : "outline"
-                              }
-                            >
-                              {getStatusLabel(changeState)}
-                            </Badge>
-                          </td>
-                          <td className="px-3 py-2">
-                            <div className="flex justify-end gap-1">
-                              {changeState !== "unchanged" && (
-                                <Button
-                                  type="button"
-                                  variant="ghost"
-                                  size="icon-sm"
-                                  aria-label={`Desfazer alterações de ${product.name}`}
-                                  onClick={() => undoProduct(product.id)}
-                                >
-                                  <RotateCcwIcon className="size-4" />
-                                </Button>
-                              )}
-                              <Button
-                                type="button"
-                                variant="ghost"
-                                size="icon-sm"
-                                aria-label={`Duplicar ${product.name}`}
-                                onClick={() => duplicateProduct(product)}
-                              >
-                                <CopyIcon className="size-4" />
-                              </Button>
-                            </div>
-                          </td>
                         </tr>
                       );
                     })
@@ -961,23 +955,23 @@ export function MenuEditorDesktop({
           </section>
         </section>
 
-        <aside className="grid gap-4 xl:sticky xl:top-[72px] xl:self-start">
+        <aside className="grid gap-4 xl:sticky xl:top-[100px] xl:self-start">
           {selectedProduct ? (
-            <section className="rounded-xl border bg-card p-4 shadow-xs">
-              <div className="mb-4 flex items-start justify-between gap-3">
+            <section className="rounded-xl border bg-card p-6 shadow-xs">
+              <div className="mb-6 flex items-start justify-between gap-4">
                 <div>
                   <p className="text-xs font-medium uppercase text-muted-foreground">
                     Detalhes
                   </p>
-                  <h2 className="mt-1 text-base font-semibold">
+                  <h2 className="mt-2 text-2xl font-semibold tracking-tight">
                     {selectedProduct.name}
                   </h2>
                 </div>
                 <Badge variant="outline">{getStatusLabel(selectedState)}</Badge>
               </div>
 
-              <div className="grid gap-4">
-                <div className="grid gap-2">
+              <div className="grid gap-6">
+                <div className="grid gap-3 border-b pb-6">
                   <Label htmlFor="selected-product-name">Nome</Label>
                   <Input
                     id="selected-product-name"
@@ -990,10 +984,11 @@ export function MenuEditorDesktop({
                       }))
                     }
                     disabled={selectedProduct.removed}
+                    className="h-12 border-transparent bg-secondary/40 text-base"
                   />
                 </div>
 
-                <div className="grid gap-2">
+                <div className="grid gap-3 border-b pb-6">
                   <Label htmlFor="selected-product-category">Categoria</Label>
                   <Select
                     value={selectedProduct.categoryId}
@@ -1005,7 +1000,10 @@ export function MenuEditorDesktop({
                     }
                     disabled={selectedProduct.removed}
                   >
-                    <SelectTrigger id="selected-product-category">
+                    <SelectTrigger
+                      id="selected-product-category"
+                      className="h-12 border-transparent bg-secondary/40 text-base"
+                    >
                       <SelectValue />
                     </SelectTrigger>
                     <SelectContent>
@@ -1018,8 +1016,8 @@ export function MenuEditorDesktop({
                   </Select>
                 </div>
 
-                <div className="grid grid-cols-2 gap-3">
-                  <div className="grid gap-2">
+                <div className="grid grid-cols-2 gap-4 border-b pb-6">
+                  <div className="grid gap-3">
                     <Label htmlFor="selected-product-price">Preço</Label>
                     <Input
                       id="selected-product-price"
@@ -1029,9 +1027,10 @@ export function MenuEditorDesktop({
                         updatePrice(selectedProduct.id, event.target.value)
                       }
                       disabled={selectedProduct.removed}
+                      className="h-12 border-transparent bg-secondary/40 text-base"
                     />
                   </div>
-                  <div className="grid gap-2">
+                  <div className="grid gap-3">
                     <Label htmlFor="selected-product-portion">Porção</Label>
                     <Input
                       id="selected-product-portion"
@@ -1043,11 +1042,12 @@ export function MenuEditorDesktop({
                         }))
                       }
                       disabled={selectedProduct.removed}
+                      className="h-12 border-transparent bg-secondary/40 text-base"
                     />
                   </div>
                 </div>
 
-                <div className="grid gap-2">
+                <div className="grid gap-3 border-b pb-6">
                   <Label htmlFor="selected-product-description">Descrição</Label>
                   <Textarea
                     id="selected-product-description"
@@ -1059,12 +1059,12 @@ export function MenuEditorDesktop({
                         shortDescription: event.target.value,
                       }))
                     }
-                    className="min-h-28 resize-y"
+                    className="min-h-32 resize-none border-transparent bg-secondary/40 text-base leading-6"
                     disabled={selectedProduct.removed}
                   />
                 </div>
 
-                <div className="grid gap-2">
+                <div className="grid gap-3 border-b pb-6">
                   <Label htmlFor="selected-product-accompaniments">
                     Acompanhamentos
                   </Label>
@@ -1082,13 +1082,13 @@ export function MenuEditorDesktop({
                         ),
                       }))
                     }
-                    className="min-h-24 resize-y"
+                    className="min-h-28 resize-none border-transparent bg-secondary/40 text-base leading-6"
                     placeholder={"Um acompanhamento por linha"}
                     disabled={selectedProduct.removed}
                   />
                 </div>
 
-                <div className="flex min-h-11 items-center justify-between rounded-lg border px-3">
+                <div className="flex min-h-14 items-center justify-between rounded-xl bg-secondary/40 px-4">
                   <Label htmlFor="selected-product-available">Disponível</Label>
                   <Switch
                     id="selected-product-available"
@@ -1103,7 +1103,22 @@ export function MenuEditorDesktop({
                   />
                 </div>
 
-                <div className="grid grid-cols-2 gap-2">
+                {selectedState !== "unchanged" && (
+                  <Button
+                    type="button"
+                    variant="ghost"
+                    onClick={() => undoProduct(selectedProduct.id)}
+                  >
+                    <RotateCcwIcon className="size-4" aria-hidden="true" />
+                    Desfazer alterações deste produto
+                  </Button>
+                )}
+
+                <div className="mt-2 grid gap-3 border-t pt-6">
+                  <p className="text-xs font-medium uppercase text-muted-foreground">
+                    Ações secundárias
+                  </p>
+                  <div className="grid grid-cols-2 gap-3">
                   <Button
                     type="button"
                     variant="outline"
@@ -1125,18 +1140,8 @@ export function MenuEditorDesktop({
                     <Trash2Icon className="size-4" aria-hidden="true" />
                     {selectedProduct.removed ? "Restaurar" : "Remover"}
                   </Button>
+                  </div>
                 </div>
-
-                {selectedState !== "unchanged" && (
-                  <Button
-                    type="button"
-                    variant="ghost"
-                    onClick={() => undoProduct(selectedProduct.id)}
-                  >
-                    <RotateCcwIcon className="size-4" aria-hidden="true" />
-                    Desfazer alterações deste produto
-                  </Button>
-                )}
               </div>
             </section>
           ) : (
@@ -1146,74 +1151,6 @@ export function MenuEditorDesktop({
           )}
         </aside>
       </main>
-
-      <section className="sticky bottom-0 z-30 border-t bg-background/95 px-4 py-3">
-        <div className="mx-auto flex w-full max-w-7xl flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
-          <div>
-            <p className="text-sm font-medium">
-              {changeCount} alteração{changeCount === 1 ? "" : "es"} não
-              publicada{changeCount === 1 ? "" : "s"}
-            </p>
-            <p className="text-xs text-muted-foreground">
-              O histórico fica no GitHub a cada publicação.
-            </p>
-            {publishMessage && (
-              <p className="mt-1 text-xs text-muted-foreground">
-                {publishMessage}
-              </p>
-            )}
-          </div>
-          <div className="grid gap-2 lg:flex lg:items-center">
-            <Input
-              type="password"
-              value={publishToken}
-              onChange={(event) => setPublishToken(event.target.value)}
-              placeholder="Chave de publicação"
-              aria-label="Chave de publicação"
-              className="lg:w-56"
-            />
-            <Button
-              type="button"
-              variant="outline"
-              onClick={discardChanges}
-              disabled={changeCount === 0 || publishing}
-            >
-              Descartar alterações
-            </Button>
-
-            <AlertDialog>
-              <AlertDialogTrigger asChild>
-                <Button
-                  type="button"
-                  disabled={changeCount === 0 || hasPriceErrors || publishing}
-                >
-                  <SaveIcon className="size-4" aria-hidden="true" />
-                  Publicar alterações
-                </Button>
-              </AlertDialogTrigger>
-              <AlertDialogContent>
-                <AlertDialogHeader>
-                  <AlertDialogTitle>
-                    Publicar alterações no cardápio?
-                  </AlertDialogTitle>
-                  <AlertDialogDescription>
-                    Esta ação criará um único commit no GitHub com {changeCount}{" "}
-                    alteração{changeCount === 1 ? "" : "es"}. A Vercel deverá
-                    iniciar um novo deploy após o commit.
-                  </AlertDialogDescription>
-                </AlertDialogHeader>
-                <AlertDialogFooter>
-                  <AlertDialogCancel>Cancelar</AlertDialogCancel>
-                  <AlertDialogAction onClick={publishChanges}>
-                    <CheckIcon className="size-4" aria-hidden="true" />
-                    Confirmar publicação
-                  </AlertDialogAction>
-                </AlertDialogFooter>
-              </AlertDialogContent>
-            </AlertDialog>
-          </div>
-        </div>
-      </section>
 
       <Dialog open={newProductOpen} onOpenChange={setNewProductOpen}>
         <DialogContent className="max-w-lg">
