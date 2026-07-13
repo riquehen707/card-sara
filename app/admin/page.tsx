@@ -1,11 +1,11 @@
 import { AdminAuthGate } from "@/components/admin/admin-auth-gate";
-import { MenuEditor } from "@/components/admin/menu-editor";
+import { MenuEditorDesktop } from "@/components/admin/menu-editor-desktop";
 import { menuData } from "@/lib/menu-data";
 
 export default function AdminPage() {
   return (
     <AdminAuthGate>
-      <MenuEditor initialMenuData={menuData} />
+      <MenuEditorDesktop initialMenuData={menuData} />
     </AdminAuthGate>
   );
 }
