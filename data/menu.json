@@ -1,10 +1,11 @@
 {
   "establishment": {
     "name": "Formaggi",
-    "headline": "Forno a lenha, massas e clássicos da casa.",
-    "description": "Pizzas, calzones, entradas, pratos e destilados em um cardápio elegante, direto e fácil de consultar.",
+    "headline": "Forno a lenha, massas e clássicos da casa",
+    "description": "Pizzas, calzones, entradas, pratos e bebidas preparados para uma experiência completa.",
     "phone": "(71) 99735-6799",
-    "hours": "Consulte o funcionamento no atendimento"
+    "hours": "Todos os dias das 17:00 até 00:00",
+    "instagram": "https://www.instagram.com/formaggi_pizzeria/"
   },
   "categories": [
     {

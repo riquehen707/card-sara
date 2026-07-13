@@ -67,52 +67,79 @@ export function PublicMenu({
         onCategorySelect={selectCategory}
       />
 
-      <main className="menu-readable flex-1 px-4 pb-10">
-        <section className="py-5" aria-labelledby="restaurant-title">
-          <div className="rounded-xl border border-primary/35 bg-card/90 p-5 shadow-[0_18px_60px_rgba(0,0,0,0.35)]">
-            <div className="flex justify-center">
+      <main className="flex-1 pb-10">
+        <section
+          className="mx-auto w-full max-w-2xl px-5 py-10 sm:py-12"
+          aria-labelledby="restaurant-title"
+        >
+          <div className="space-y-8">
+            <div className="space-y-6">
               <Image
                 src="/brand/formaggi_logo_vertical.svg"
                 alt="Formaggi"
                 width={220}
                 height={101}
-                className="h-auto w-48 max-w-full"
+                className="h-auto w-36 max-w-full"
                 priority
               />
+
+              <div className="max-w-xl">
+                <h1
+                  id="restaurant-title"
+                  className="text-3xl font-semibold leading-tight tracking-normal text-foreground sm:text-4xl"
+                >
+                  {establishment.headline}
+                </h1>
+                <p
+                  id="sobre"
+                  className="mt-4 max-w-lg text-base leading-7 text-muted-foreground"
+                >
+                  {establishment.description}
+                </p>
+              </div>
             </div>
-            <h1
-              id="restaurant-title"
-              className="mt-5 text-center text-2xl font-semibold leading-8 text-foreground"
-            >
-              {establishment.headline}
-            </h1>
-            <p
-              id="sobre"
-              className="mt-3 text-center text-sm leading-6 text-muted-foreground"
-            >
-              {establishment.description}
-            </p>
+
             <dl
               id="informacoes"
-              className="mt-4 grid gap-2 border-t border-primary/20 pt-4 text-sm"
+              className="grid gap-5 border-t border-primary/15 pt-6 text-sm sm:grid-cols-2"
             >
-              <div className="flex justify-between gap-4">
-                <dt className="text-muted-foreground">Horário</dt>
-                <dd className="text-right font-medium text-foreground">
+              <div className="space-y-1.5">
+                <dt className="text-xs font-medium uppercase tracking-[0.16em] text-primary/75">
+                  Funcionamento
+                </dt>
+                <dd className="leading-6 text-foreground">
                   {establishment.hours}
                 </dd>
               </div>
-              <div className="flex justify-between gap-4">
-                <dt className="text-muted-foreground">Contato</dt>
-                <dd id="fale-conosco" className="font-medium text-foreground">
-                  {establishment.phone}
+              <div className="space-y-1.5">
+                <dt className="text-xs font-medium uppercase tracking-[0.16em] text-primary/75">
+                  Contato
+                </dt>
+                <dd id="fale-conosco" className="leading-6 text-foreground">
+                  <span>{establishment.phone}</span>
+                  {establishment.instagram && (
+                    <>
+                      <br />
+                      <a
+                        href={establishment.instagram}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-primary underline-offset-4 outline-none hover:underline focus-visible:rounded-sm focus-visible:ring-[3px] focus-visible:ring-ring/50"
+                      >
+                        Instagram
+                      </a>
+                    </>
+                  )}
                 </dd>
               </div>
             </dl>
           </div>
         </section>
 
-        <section className="space-y-4" aria-labelledby="menu-title">
+        <section
+          className="menu-readable space-y-4 px-4"
+          aria-labelledby="menu-title"
+        >
           <div className="flex items-end justify-between gap-4">
             <div>
               <h2 id="menu-title" className="text-lg font-semibold text-primary">

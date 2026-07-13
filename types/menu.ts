@@ -7,6 +7,7 @@ export const establishmentSchema = z.object({
   address: z.string().optional(),
   phone: z.string().min(1),
   hours: z.string().min(1),
+  instagram: z.string().url().optional(),
 });
 
 export const categorySchema = z.object({
