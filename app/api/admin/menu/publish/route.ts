@@ -14,15 +14,21 @@ type GitHubContentResponse = {
 };
 
 const githubApiVersion = "2022-11-28";
+const defaultGitHubOwner = "riquehen707";
+const defaultGitHubRepo = "card-sara";
+const defaultGitHubBranch = "master";
+const defaultGitHubMenuPath = "data/menu.json";
 
-function getRequiredEnv(name: string) {
-  const value = process.env[name];
+function getGitHubToken() {
+  const token = process.env.GITHUB_TOKEN;
 
-  if (!value) {
-    throw new Error(`Variável de ambiente ausente: ${name}`);
+  if (!token) {
+    throw new Error(
+      "Publicação indisponível: configuração interna do GitHub ausente."
+    );
   }
 
-  return value;
+  return token;
 }
 
 function createJsonResponse(data: unknown, status = 200) {
@@ -50,11 +56,11 @@ export async function POST(request: Request) {
   }
 
   try {
-    const owner = getRequiredEnv("GITHUB_OWNER");
-    const repo = getRequiredEnv("GITHUB_REPO");
-    const token = getRequiredEnv("GITHUB_TOKEN");
-    const branch = process.env.GITHUB_BRANCH ?? "main";
-    const filePath = process.env.GITHUB_MENU_PATH ?? "data/menu.json";
+    const owner = process.env.GITHUB_OWNER ?? defaultGitHubOwner;
+    const repo = process.env.GITHUB_REPO ?? defaultGitHubRepo;
+    const token = getGitHubToken();
+    const branch = process.env.GITHUB_BRANCH ?? defaultGitHubBranch;
+    const filePath = process.env.GITHUB_MENU_PATH ?? defaultGitHubMenuPath;
     const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${encodeURIComponent(filePath).replaceAll("%2F", "/")}`;
 
     const headers = {
