@@ -1164,7 +1164,7 @@
       "portion": "Porção",
       "imageUrl": "/mock/placeholder.svg",
       "imageAlt": "Pudim",
-      "available": true
+      "available": false
     },
     {
       "id": "delicia-gelada",
