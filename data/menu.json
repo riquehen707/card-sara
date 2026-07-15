@@ -2270,7 +2270,7 @@
       "portion": "Porção",
       "imageUrl": "/mock/placeholder.svg",
       "imageAlt": "Teste",
-      "available": true
+      "available": false
     }
   ]
 }
