@@ -2355,6 +2355,20 @@
       "imageUrl": "/mock/placeholder.svg",
       "imageAlt": "Corona zora",
       "available": true
+    },
+    {
+      "id": "stella-puro-gold",
+      "slug": "stella-puro-gold",
+      "name": "stella puro gold",
+      "categoryId": "cervejas",
+      "order": 19,
+      "shortDescription": "stella puro gold",
+      "description": "stella puro gold",
+      "price": 19.9,
+      "portion": "Porção",
+      "imageUrl": "/mock/placeholder.svg",
+      "imageAlt": "stella puro gold",
+      "available": true
     }
   ]
 }
