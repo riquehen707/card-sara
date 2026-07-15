@@ -1410,8 +1410,8 @@
       "name": "Honey",
       "categoryId": "drinks",
       "order": 16,
-      "shortDescription": "Hortelã, limão siciliano, jack daniels honey, sprite ",
-      "description": "Hortelã, limão siciliano, jack daniels honey, sprite ",
+      "shortDescription": "Hortelã, limão siciliano, jack daniels honey, sprite .",
+      "description": "Hortelã, limão siciliano, jack daniels honey, sprite .",
       "price": 39.9,
       "portion": "Drink",
       "imageUrl": "/mock/placeholder.svg",
@@ -1424,8 +1424,8 @@
       "name": "Apple",
       "categoryId": "drinks",
       "order": 17,
-      "shortDescription": "jack daniels apple ,limão siciliano, tônica ou schweppes citrus ",
-      "description": "jack daniels apple ,limão siciliano, tônica ou schweppes citrus ",
+      "shortDescription": "jack daniels apple ,limão siciliano, tônica ou schweppes citrus .",
+      "description": "jack daniels apple ,limão siciliano, tônica ou schweppes citrus .",
       "price": 39.9,
       "portion": "Drink",
       "imageUrl": "/mock/placeholder.svg",
@@ -1438,13 +1438,20 @@
       "name": "Marguerita",
       "categoryId": "drinks",
       "order": 18,
-      "shortDescription": "Drink Marguerita.",
-      "description": "Drink Marguerita.",
+      "shortDescription": "Tequila, cointreau, limão taiti, curaçau blue.",
+      "description": "Tequila, cointreau, limão taiti, curaçau blue.",
       "price": 34.9,
       "portion": "Drink",
       "imageUrl": "/mock/placeholder.svg",
       "imageAlt": "Marguerita",
-      "available": true
+      "available": true,
+      "accompaniments": [
+        {
+          "id": "marguerita-drink-acompanhamento-1",
+          "name": "Tequila, cointreau, limão taiti, curaçau blue.",
+          "included": true
+        }
+      ]
     },
     {
       "id": "marguerita-blue",
@@ -1452,8 +1459,8 @@
       "name": "Marguerita Blue",
       "categoryId": "drinks",
       "order": 19,
-      "shortDescription": "Drink Marguerita Blue.",
-      "description": "Drink Marguerita Blue.",
+      "shortDescription": "Tequila, cointreau, limão taiti, curaçau blue.",
+      "description": "Tequila, cointreau, limão taiti, curaçau blue.",
       "price": 39.9,
       "portion": "Drink",
       "imageUrl": "/mock/placeholder.svg",
