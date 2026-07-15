@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent, ReactNode, useState } from "react";
+import { FormEvent, ReactNode, useEffect, useState } from "react";
 import Link from "next/link";
 import { ArrowLeftIcon, LockKeyholeIcon } from "lucide-react";
 
@@ -20,38 +20,84 @@ type AdminAuthGateProps = {
 };
 
 const adminSessionStorageKey = "cardapio-sara-admin-session";
-const adminUser = "admin";
-const adminAccessKey = "admin";
 
 export function AdminAuthGate({ children }: AdminAuthGateProps) {
-  const [isAuthenticated, setIsAuthenticated] = useState(() => {
-    if (typeof window === "undefined") {
-      return false;
+  const [isAuthenticated, setIsAuthenticated] = useState<boolean | null>(null);
+  const [user, setUser] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const [submitting, setSubmitting] = useState(false);
+
+  useEffect(() => {
+    let mounted = true;
+
+    async function checkSession() {
+      try {
+        const response = await fetch("/api/admin/session", {
+          cache: "no-store",
+        });
+        const data = (await response.json()) as { authenticated?: boolean };
+
+        if (mounted) {
+          setIsAuthenticated(Boolean(data.authenticated));
+        }
+      } catch {
+        if (mounted) {
+          setIsAuthenticated(false);
+        }
+      }
     }
 
-    return (
-      window.sessionStorage.getItem(adminSessionStorageKey) === "authenticated"
-    );
-  });
-  const [user, setUser] = useState("");
-  const [accessKey, setAccessKey] = useState("");
-  const [error, setError] = useState("");
+    checkSession();
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    return () => {
+      mounted = false;
+    };
+  }, []);
+
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    if (user.trim() !== adminUser || accessKey !== adminAccessKey) {
-      setError("Usuário ou chave de acesso inválidos.");
-      return;
-    }
-
-    window.sessionStorage.setItem(adminSessionStorageKey, "authenticated");
-    setIsAuthenticated(true);
+    setSubmitting(true);
     setError("");
+
+    try {
+      const response = await fetch("/api/admin/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ user, password }),
+      });
+      const data = (await response.json()) as { error?: string };
+
+      if (!response.ok) {
+        throw new Error(data.error ?? "Não foi possível entrar.");
+      }
+
+      window.sessionStorage.setItem(adminSessionStorageKey, "authenticated");
+      setIsAuthenticated(true);
+      setUser("");
+      setPassword("");
+    } catch (error) {
+      setError(
+        error instanceof Error ? error.message : "Não foi possível entrar."
+      );
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   if (isAuthenticated) {
     return children;
+  }
+
+  if (isAuthenticated === null) {
+    return (
+      <main className="grid min-h-dvh place-items-center bg-secondary/40 px-4 py-8">
+        <div className="text-sm text-muted-foreground">Carregando acesso...</div>
+      </main>
+    );
   }
 
   return (
@@ -75,7 +121,7 @@ export function AdminAuthGate({ children }: AdminAuthGateProps) {
           <div>
             <CardTitle>Acesso administrativo</CardTitle>
             <CardDescription className="mt-2">
-              Entre com o usuário e a chave de acesso do cardápio.
+              Entre com o usuário e a senha do cardápio.
             </CardDescription>
           </div>
         </CardHeader>
@@ -88,18 +134,18 @@ export function AdminAuthGate({ children }: AdminAuthGateProps) {
                 autoComplete="username"
                 value={user}
                 onChange={(event) => setUser(event.target.value)}
-                placeholder="admin"
+                placeholder="Digite o usuário"
               />
             </div>
             <div className="grid gap-2">
-              <Label htmlFor="admin-access-key">Chave de acesso</Label>
+              <Label htmlFor="admin-password">Senha</Label>
               <Input
-                id="admin-access-key"
+                id="admin-password"
                 type="password"
                 autoComplete="current-password"
-                value={accessKey}
-                onChange={(event) => setAccessKey(event.target.value)}
-                placeholder="admin"
+                value={password}
+                onChange={(event) => setPassword(event.target.value)}
+                placeholder="Digite a senha"
               />
             </div>
             {error && (
@@ -107,8 +153,8 @@ export function AdminAuthGate({ children }: AdminAuthGateProps) {
                 {error}
               </p>
             )}
-            <Button type="submit" className="w-full">
-              Entrar
+            <Button type="submit" className="w-full" disabled={submitting}>
+              {submitting ? "Entrando..." : "Entrar"}
             </Button>
           </form>
         </CardContent>

@@ -73,7 +73,6 @@ type NewProductForm = {
 type ProductStatusFilter = "todos" | "alterados" | "indisponiveis";
 
 const draftStorageKey = "cardapio-sara-admin-draft-v1";
-const publishTokenStorageKey = "cardapio-sara-admin-publish-token";
 const adminSessionStorageKey = "cardapio-sara-admin-session";
 const placeholderImageUrl = "/mock/placeholder.svg";
 
@@ -222,14 +221,6 @@ function createPriceInputs(products: ProductDraft[]) {
   );
 }
 
-function getStoredPublishToken() {
-  if (typeof window === "undefined") {
-    return "";
-  }
-
-  return window.sessionStorage.getItem(publishTokenStorageKey) ?? "";
-}
-
 function createUniqueProductId(base: string, products: ProductDraft[]) {
   const normalizedBase = createSlug(base) || "produto";
   const existingIds = new Set(products.map((product) => product.id));
@@ -313,7 +304,6 @@ export function MenuEditorDesktop({
     categoryId: initialMenuData.categories[0]?.id ?? "",
     price: "",
   });
-  const [publishToken, setPublishToken] = useState(getStoredPublishToken);
   const [publishing, setPublishing] = useState(false);
   const [publishMessage, setPublishMessage] = useState<string | null>(null);
 
@@ -586,7 +576,8 @@ export function MenuEditorDesktop({
     setPublishMessage(null);
   }
 
-  function logout() {
+  async function logout() {
+    await fetch("/api/admin/logout", { method: "POST" });
     window.sessionStorage.removeItem(adminSessionStorageKey);
     window.location.reload();
   }
@@ -602,16 +593,12 @@ export function MenuEditorDesktop({
 
     setPublishing(true);
     setPublishMessage(null);
-    window.sessionStorage.setItem(publishTokenStorageKey, publishToken);
 
     try {
       const response = await fetch("/api/admin/menu/publish", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          ...(publishToken
-            ? { "x-admin-publish-token": publishToken }
-            : {}),
         },
         body: JSON.stringify({ menuData: parsedMenuData.data }),
       });
@@ -682,14 +669,6 @@ export function MenuEditorDesktop({
                 ? `${changeCount} pendente${changeCount === 1 ? "" : "s"}`
                 : "Tudo publicado"}
             </div>
-            <Input
-              type="password"
-              value={publishToken}
-              onChange={(event) => setPublishToken(event.target.value)}
-              placeholder="Chave"
-              aria-label="Chave de publicação"
-              className="h-10 w-28 md:w-40"
-            />
             <AlertDialog>
               <AlertDialogTrigger asChild>
                 <Button

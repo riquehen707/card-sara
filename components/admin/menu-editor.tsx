@@ -67,7 +67,6 @@ type NewProductForm = {
 };
 
 const draftStorageKey = "cardapio-sara-admin-draft-v1";
-const publishTokenStorageKey = "cardapio-sara-admin-publish-token";
 
 function normalizeText(value: string) {
   return value
@@ -220,14 +219,6 @@ function createPriceInputs(products: ProductDraft[]) {
   );
 }
 
-function getStoredPublishToken() {
-  if (typeof window === "undefined") {
-    return "";
-  }
-
-  return window.sessionStorage.getItem(publishTokenStorageKey) ?? "";
-}
-
 export function MenuEditor({ initialMenuData }: MenuEditorProps) {
   const initialFingerprint = getDraftFingerprint(initialMenuData);
   const [draft, setDraft] = useState<DraftMenuData>(() =>
@@ -246,7 +237,6 @@ export function MenuEditor({ initialMenuData }: MenuEditorProps) {
     categoryId: initialMenuData.categories[0]?.id ?? "",
     price: "",
   });
-  const [publishToken, setPublishToken] = useState(getStoredPublishToken);
   const [publishing, setPublishing] = useState(false);
   const [publishMessage, setPublishMessage] = useState<string | null>(null);
 
@@ -406,16 +396,12 @@ export function MenuEditor({ initialMenuData }: MenuEditorProps) {
 
     setPublishing(true);
     setPublishMessage(null);
-    window.sessionStorage.setItem(publishTokenStorageKey, publishToken);
 
     try {
       const response = await fetch("/api/admin/menu/publish", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          ...(publishToken
-            ? { "x-admin-publish-token": publishToken }
-            : {}),
         },
         body: JSON.stringify({ menuData: parsedMenuData.data }),
       });
@@ -659,14 +645,6 @@ export function MenuEditor({ initialMenuData }: MenuEditorProps) {
               )}
             </div>
             <div className="grid gap-2 md:flex md:items-center">
-              <Input
-                type="password"
-                value={publishToken}
-                onChange={(event) => setPublishToken(event.target.value)}
-                placeholder="Chave de publicação"
-                aria-label="Chave de publicação"
-                className="md:w-56"
-              />
               <Button
                 type="button"
                 variant="outline"

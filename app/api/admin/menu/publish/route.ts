@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 
+import { hasAdminSession } from "@/lib/admin-auth";
 import { menuDataSchema } from "@/types/menu";
 
 const publishRequestSchema = z.object({
@@ -29,24 +30,11 @@ function createJsonResponse(data: unknown, status = 200) {
 }
 
 export async function POST(request: Request) {
-  const adminToken = process.env.ADMIN_PUBLISH_TOKEN;
-
-  if (process.env.NODE_ENV === "production" && !adminToken) {
+  if (!(await hasAdminSession())) {
     return createJsonResponse(
-      {
-        error:
-          "Configure ADMIN_PUBLISH_TOKEN antes de permitir publicações em produção.",
-      },
-      500
+      { error: "Sessão administrativa expirada. Entre novamente." },
+      401
     );
-  }
-
-  if (adminToken) {
-    const providedToken = request.headers.get("x-admin-publish-token");
-
-    if (providedToken !== adminToken) {
-      return createJsonResponse({ error: "Chave de publicação inválida." }, 401);
-    }
   }
 
   const parsedRequest = publishRequestSchema.safeParse(await request.json());
