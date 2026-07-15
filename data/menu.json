@@ -2257,6 +2257,20 @@
       "imageUrl": "/mock/placeholder.svg",
       "imageAlt": "Red Bull",
       "available": true
+    },
+    {
+      "id": "teste",
+      "slug": "teste",
+      "name": "Teste",
+      "categoryId": "entradas",
+      "order": 21,
+      "shortDescription": "Teste",
+      "description": "Teste",
+      "price": 65,
+      "portion": "Porção",
+      "imageUrl": "/mock/placeholder.svg",
+      "imageAlt": "Teste",
+      "available": true
     }
   ]
 }
