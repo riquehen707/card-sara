@@ -44,6 +44,7 @@ import {
 } from "@/components/ui/select";
 import { Switch } from "@/components/ui/switch";
 import { Textarea } from "@/components/ui/textarea";
+import { ProductImageField } from "@/components/admin/product-image-field";
 import { formatCurrency } from "@/lib/menu-utils";
 import { cn } from "@/lib/utils";
 import type { Category, MenuData, Product, ProductAccompaniment } from "@/types/menu";
@@ -68,6 +69,7 @@ type NewProductForm = {
   description: string;
   categoryId: string;
   price: string;
+  imageUrl: string;
 };
 
 type ProductStatusFilter = "todos" | "alterados" | "indisponiveis";
@@ -303,6 +305,7 @@ export function MenuEditorDesktop({
     description: "",
     categoryId: initialMenuData.categories[0]?.id ?? "",
     price: "",
+    imageUrl: placeholderImageUrl,
   });
   const [publishing, setPublishing] = useState(false);
   const [publishMessage, setPublishMessage] = useState<string | null>(null);
@@ -517,7 +520,7 @@ export function MenuEditorDesktop({
       description,
       price: parsedPrice.value,
       portion: "Porção",
-      imageUrl: placeholderImageUrl,
+      imageUrl: newProduct.imageUrl,
       imageAlt: newProduct.name.trim(),
       available: true,
     };
@@ -536,6 +539,7 @@ export function MenuEditorDesktop({
       description: "",
       categoryId: initialMenuData.categories[0]?.id ?? "",
       price: "",
+      imageUrl: placeholderImageUrl,
     });
     setNewProductOpen(false);
     setPublishMessage(null);
@@ -951,6 +955,21 @@ export function MenuEditorDesktop({
 
               <div className="grid gap-6">
                 <div className="grid gap-3 border-b pb-6">
+                  <Label>Foto do produto</Label>
+                  <ProductImageField
+                    imageUrl={selectedProduct.imageUrl}
+                    imageAlt={selectedProduct.imageAlt}
+                    productSlug={selectedProduct.slug}
+                    disabled={selectedProduct.removed}
+                    onChange={(imageUrl) =>
+                      updateProduct(selectedProduct.id, (product) => ({
+                        ...product,
+                        imageUrl,
+                      }))
+                    }
+                  />
+                </div>
+                <div className="grid gap-3 border-b pb-6">
                   <Label htmlFor="selected-product-name">Nome</Label>
                   <Input
                     id="selected-product-name"
@@ -1132,11 +1151,25 @@ export function MenuEditorDesktop({
       </main>
 
       <Dialog open={newProductOpen} onOpenChange={setNewProductOpen}>
-        <DialogContent className="max-w-lg">
+        <DialogContent className="max-h-[calc(100dvh-2rem)] max-w-lg overflow-y-auto">
           <DialogHeader>
             <DialogTitle>Adicionar produto</DialogTitle>
           </DialogHeader>
           <div className="grid gap-4">
+            <div className="grid gap-2">
+              <Label>Foto do produto</Label>
+              <ProductImageField
+                imageUrl={newProduct.imageUrl}
+                imageAlt={newProduct.name || "Novo produto"}
+                productSlug={createSlug(newProduct.name) || "novo-produto"}
+                onChange={(imageUrl) =>
+                  setNewProduct((currentProduct) => ({
+                    ...currentProduct,
+                    imageUrl,
+                  }))
+                }
+              />
+            </div>
             <div className="grid gap-2">
               <Label htmlFor="new-product-name">Nome</Label>
               <Input
