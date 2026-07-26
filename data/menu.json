@@ -1316,7 +1316,7 @@
       "description": "Xarope de limão siciliano, xarope de gengibre, whisky, canela, hortelã e espuma de gengibre.",
       "price": 39.9,
       "portion": "Drink",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/spritz-1785023988983.jpg",
       "imageAlt": "Spritz",
       "available": true
     },
