@@ -178,7 +178,7 @@
       "description": "Porção com 6 unidades.",
       "price": 44.9,
       "portion": "6 unidades",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/bolinho-de-bacalhau-1785024467280.jpg",
       "imageAlt": "Bolinho de Bacalhau",
       "available": true
     },
@@ -473,7 +473,7 @@
       "description": "Salmão Grelhado.",
       "price": 89.9,
       "portion": "Prato",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/salmao-grelhado-1785024372754.jpg",
       "imageAlt": "Salmão Grelhado",
       "available": true,
       "accompaniments": [
@@ -630,7 +630,7 @@
       "description": "Frango ou bolonhesa.",
       "price": 49.9,
       "portion": "Prato",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/lasanha-1785024396926.jpg",
       "imageAlt": "Lasanha",
       "available": true
     },
