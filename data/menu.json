@@ -700,7 +700,7 @@
       "description": "Molho de tomate pomodoro, queijo muzzarella, cupim, requeijão cremoso, queijo coalho e orégano.",
       "price": 79.9,
       "portion": "Pizza",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/pizza-cupim-1785103793959.jpg",
       "imageAlt": "Cupim",
       "available": true
     },
