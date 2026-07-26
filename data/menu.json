@@ -1561,7 +1561,7 @@
       "description": "Budweiser 0% 330ml.",
       "price": 11.9,
       "portion": "330ml",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/budweiser-zero-330ml-1785031103397.jpg",
       "imageAlt": "Budweiser 0% 330ml",
       "available": true
     },
@@ -1575,7 +1575,7 @@
       "description": "Stella Artois 330ml.",
       "price": 13.9,
       "portion": "330ml",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/stella-artois-330ml-1785031188318.jpg",
       "imageAlt": "Stella Artois 330ml",
       "available": true
     },
@@ -2303,7 +2303,7 @@
       "description": "Molho pomodoro, queijo mozzarella, carne do sol, cebola, queijo coalho, orégano",
       "price": 89.9,
       "portion": "Porção",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/carne-do-sol-1785031229379.jpg",
       "imageAlt": "Carne do sol",
       "available": true
     },
