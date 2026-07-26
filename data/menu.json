@@ -136,7 +136,7 @@
       "description": "Bruscheta de parma.",
       "price": 39.9,
       "portion": "Porção",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/bruscheta-parma-1785103638252.jpg",
       "imageAlt": "Bruscheta Parma",
       "available": true
     },
@@ -826,7 +826,7 @@
       "description": "Molho de tomate pomodoro, queijo muzzarella, camarão, pesto de manjericão e orégano.",
       "price": 89.9,
       "portion": "Pizza",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/pizza-camarao-pesto-1785103664285.jpg",
       "imageAlt": "Camarão ao Molho Pesto",
       "available": true
     },
@@ -840,7 +840,7 @@
       "description": "Molho de tomate pomodoro, queijo muzzarella, camarão, catupiry e orégano.",
       "price": 89.9,
       "portion": "Pizza",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/pizza-camarao-catupiry-1785103713884.jpg",
       "imageAlt": "Camarão com Catupiry",
       "available": true
     },
