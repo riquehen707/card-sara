@@ -304,7 +304,7 @@
       "description": "Picanha (300g).",
       "price": 79.9,
       "portion": "300g",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/picanha-300g-1785024786630.jpg",
       "imageAlt": "Picanha (300g)",
       "available": true,
       "accompaniments": [
