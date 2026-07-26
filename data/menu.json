@@ -1493,7 +1493,7 @@
       "portion": "355ml",
       "imageUrl": "/mock/placeholder.svg",
       "imageAlt": "Patagonia 355ml",
-      "available": true
+      "available": false
     },
     {
       "id": "heineken-330ml",
@@ -1505,7 +1505,7 @@
       "description": "Heineken 330ml.",
       "price": 13.9,
       "portion": "330ml",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/heineken-330ml-1785031575064.jpg",
       "imageAlt": "Heineken 330ml",
       "available": true
     },
@@ -1519,7 +1519,7 @@
       "description": "Heineken 0% 330ml.",
       "price": 12.9,
       "portion": "330ml",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/heineken-zero-330ml-1785031623665.jpg",
       "imageAlt": "Heineken 0% 330ml",
       "available": true
     },
@@ -1533,7 +1533,7 @@
       "description": "Corona 330ml.",
       "price": 13.9,
       "portion": "330ml",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/corona-330ml-1785031973736.jpg",
       "imageAlt": "Corona 330ml",
       "available": true
     },
@@ -1547,7 +1547,7 @@
       "description": "Budweiser 330ml.",
       "price": 11.9,
       "portion": "330ml",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/budweiser-330ml-1785032076699.jpg",
       "imageAlt": "Budweiser 330ml",
       "available": true
     },
@@ -1589,7 +1589,7 @@
       "description": "Stella Artois Pure Gold 300ml.",
       "price": 13.9,
       "portion": "300ml",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/stella-artois-pure-gold-300ml-1785032229122.jpg",
       "imageAlt": "Stella Artois Pure Gold 300ml",
       "available": true
     },
@@ -1603,7 +1603,7 @@
       "description": "Heineken 600ml.",
       "price": 19.9,
       "portion": "600ml",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/heineken-600ml-1785032265581.jpg",
       "imageAlt": "Heineken 600ml",
       "available": true
     },
@@ -1617,7 +1617,7 @@
       "description": "Stella Artois 600ml.",
       "price": 19.9,
       "portion": "600ml",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/stella-artois-600ml-1785032310176.jpg",
       "imageAlt": "Stella Artois 600ml",
       "available": true
     },
@@ -1631,7 +1631,7 @@
       "description": "Budweiser 600ml.",
       "price": 14.9,
       "portion": "600ml",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/budweiser-600ml-1785032460236.jpg",
       "imageAlt": "Budweiser 600ml",
       "available": true
     },
@@ -1645,7 +1645,7 @@
       "description": "Spaten 600ml.",
       "price": 14.9,
       "portion": "600ml",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/spaten-600ml-1785032530758.jpg",
       "imageAlt": "Spaten 600ml",
       "available": true
     },
@@ -1659,7 +1659,7 @@
       "description": "Amstel 600ml.",
       "price": 14.9,
       "portion": "600ml",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/amstel-600ml-1785032589988.jpg",
       "imageAlt": "Amstel 600ml",
       "available": true
     },
@@ -1673,7 +1673,7 @@
       "description": "Original 600ml.",
       "price": 14.9,
       "portion": "600ml",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/original-600ml-1785032634803.jpg",
       "imageAlt": "Original 600ml",
       "available": true
     },
@@ -2331,7 +2331,7 @@
       "description": "Amstel ultra",
       "price": 12.9,
       "portion": "Porção",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/amstel-ultra-1785032769047.jpg",
       "imageAlt": "Amstel ultra",
       "available": true
     },
@@ -2345,22 +2345,22 @@
       "description": "Praya",
       "price": 13.9,
       "portion": "Porção",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/praya-1785032839474.jpg",
       "imageAlt": "Praya",
       "available": true
     },
     {
       "id": "corona-zora",
       "slug": "corona-zora",
-      "name": "Corona zora",
+      "name": "Corona 0%",
       "categoryId": "cervejas",
       "order": 18,
       "shortDescription": "Corona zora",
       "description": "Corona zora",
       "price": 13.9,
       "portion": "Porção",
-      "imageUrl": "/mock/placeholder.svg",
-      "imageAlt": "Corona zora",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/corona-zora-1785032927701.jpg",
+      "imageAlt": "Corona 0%",
       "available": true
     },
     {
@@ -2373,7 +2373,7 @@
       "description": "stella puro gold",
       "price": 19.9,
       "portion": "Porção",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/stella-puro-gold-1785032998714.jpg",
       "imageAlt": "stella puro gold",
       "available": true
     }
