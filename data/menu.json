@@ -2135,7 +2135,7 @@
       "description": "Schweppes. Opções: citrus ou tônica.",
       "price": 7.9,
       "portion": "Unidade",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/schweppes-1785077890190.jpg",
       "imageAlt": "Schweppes",
       "available": true
     },
@@ -2163,7 +2163,7 @@
       "description": "Suco de uva integral.",
       "price": 18.9,
       "portion": "500ml",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/suco-uva-integral-500ml-1785078004184.jpg",
       "imageAlt": "Suco de Uva Integral 500ml",
       "available": true
     },
@@ -2177,7 +2177,7 @@
       "description": "Suco natural de laranja.",
       "price": 12.9,
       "portion": "350ml",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/suco-laranja-natural-350ml-1785078047951.jpg",
       "imageAlt": "Suco de Laranja Natural 350ml",
       "available": true
     },
@@ -2191,7 +2191,7 @@
       "description": "Suco natural de maracujá.",
       "price": 16.9,
       "portion": "350ml",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/suco-maracuja-natural-350ml-1785078091975.jpg",
       "imageAlt": "Suco de Maracujá Natural 350ml",
       "available": true
     },
@@ -2205,7 +2205,7 @@
       "description": "Suco natural de frutas vermelhas.",
       "price": 18.9,
       "portion": "350ml",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/suco-frutas-vermelhas-natural-350ml-1785078140951.jpg",
       "imageAlt": "Suco de Frutas Vermelhas Natural 350ml",
       "available": true
     },
@@ -2219,7 +2219,7 @@
       "description": "Suco natural de morango.",
       "price": 16.9,
       "portion": "350ml",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/suco-morango-natural-350ml-1785078197164.jpg",
       "imageAlt": "Suco de Morango Natural 350ml",
       "available": true
     },
@@ -2233,7 +2233,7 @@
       "description": "Suco natural de limão.",
       "price": 14.9,
       "portion": "350ml",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/suco-limao-natural-350ml-1785078235398.jpg",
       "imageAlt": "Suco de Limão Natural 350ml",
       "available": true
     },
@@ -2247,7 +2247,7 @@
       "description": "Limonada suíça natural.",
       "price": 18.9,
       "portion": "350ml",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/limonada-suica-natural-350ml-1785078277842.jpg",
       "imageAlt": "Limonada Suíça Natural 350ml",
       "available": true
     },
@@ -2261,7 +2261,7 @@
       "description": "Energético Red Bull.",
       "price": 15,
       "portion": "Unidade",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/red-bull-1785077751985.jpg",
       "imageAlt": "Red Bull",
       "available": true
     },
