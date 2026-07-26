@@ -686,7 +686,7 @@
       "description": "Molho de tomate pomodoro, queijo muzzarella, queijo brie, bacon artesanal, geleia agridoce e orégano.",
       "price": 89.9,
       "portion": "Pizza",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/pizza-do-cheff-1785107004823.jpg",
       "imageAlt": "Do Cheff",
       "available": true
     },
@@ -896,7 +896,7 @@
       "description": "Molho de tomate pomodoro, queijo muzzarella, gorgonzola, parmesão, catupiry e orégano.",
       "price": 79.9,
       "portion": "Pizza",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/pizza-formaggi-1785107032844.jpg",
       "imageAlt": "Formaggi",
       "available": true
     },
