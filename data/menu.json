@@ -1134,7 +1134,7 @@
       "description": "Pizza doce sabor Kit Kat.",
       "price": 79.9,
       "portion": "Pizza doce",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/pizza-doce-kit-kat-1785104326208.jpg",
       "imageAlt": "Kit Kat",
       "available": true
     },
