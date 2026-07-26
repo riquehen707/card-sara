@@ -784,7 +784,7 @@
       "description": "Molho de tomate pomodoro, queijo muzzarella, tomate confit, manjericão e orégano.",
       "price": 65.9,
       "portion": "Pizza",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/pizza-marguerita-1785030849241.jpg",
       "imageAlt": "Marguerita",
       "available": true
     },
