@@ -94,7 +94,7 @@
       "description": "Burrata artesanal, tomate seco e molho pesto, acompanhado de pão rústico.",
       "price": 69.9,
       "portion": "Porção",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/san-virgilio-1785024080065.jpg",
       "imageAlt": "San Virgílio",
       "available": true
     },
@@ -1344,7 +1344,7 @@
       "description": "Morango ou maracujá, tônica, gin e paleta mexicana.",
       "price": 45.9,
       "portion": "Drink",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/turim-1785024047568.jpg",
       "imageAlt": "Turim",
       "available": true
     },
