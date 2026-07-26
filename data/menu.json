@@ -952,7 +952,7 @@
       "description": "Molho de tomate pomodoro, queijo muzzarella, frango, catupiry e orégano.",
       "price": 69.9,
       "portion": "Pizza",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/pizza-frango-catupiry-1785101857917.jpg",
       "imageAlt": "Frango com Catupiry",
       "available": true
     },
