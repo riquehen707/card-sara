@@ -1477,7 +1477,7 @@
       "description": "Chopp Brahma 330ml.",
       "price": 12.9,
       "portion": "330ml",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/chopp-brahma-330ml-1785104252639.jpg",
       "imageAlt": "Chopp Brahma 330ml",
       "available": true
     },
