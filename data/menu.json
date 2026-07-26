@@ -1687,7 +1687,7 @@
       "description": "Dose de Cachaça Cabaré Extra Premium.",
       "price": 45,
       "portion": "Dose",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/cachaca-cabare-extra-premium-1785027613906.jpg",
       "imageAlt": "Cachaça Cabaré Extra Premium",
       "available": true
     },
@@ -1701,7 +1701,7 @@
       "description": "Dose de Cachaça Cabaré Prata.",
       "price": 10,
       "portion": "Dose",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/cachaca-cabare-prata-1785027712275.jpg",
       "imageAlt": "Cachaça Cabaré Prata",
       "available": true
     },
@@ -1715,7 +1715,7 @@
       "description": "Dose de Cachaça Cabaré Ouro.",
       "price": 10,
       "portion": "Dose",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/cachaca-cabare-ouro-1785027732599.jpg",
       "imageAlt": "Cachaça Cabaré Ouro",
       "available": true
     },
@@ -1729,7 +1729,7 @@
       "description": "Dose de Cachaça Cabaré Fire.",
       "price": 10,
       "portion": "Dose",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/cachaca-cabare-fire-1785027844171.jpg",
       "imageAlt": "Cachaça Cabaré Fire",
       "available": true
     },
@@ -1743,7 +1743,7 @@
       "description": "Dose de Cachaça Seleta Prata.",
       "price": 10,
       "portion": "Dose",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/cachaca-seleta-prata-1785027947127.jpg",
       "imageAlt": "Cachaça Seleta Prata",
       "available": true
     },
@@ -1757,7 +1757,7 @@
       "description": "Dose de Cachaça Seleta Ouro.",
       "price": 10,
       "portion": "Dose",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/cachaca-seleta-ouro-1785027996886.jpg",
       "imageAlt": "Cachaça Seleta Ouro",
       "available": true
     },
@@ -1771,7 +1771,7 @@
       "description": "Dose de Campari.",
       "price": 12.9,
       "portion": "Dose",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/campari-1785028014069.jpg",
       "imageAlt": "Campari",
       "available": true
     },
@@ -1785,7 +1785,7 @@
       "description": "Dose de Bacardi.",
       "price": 10,
       "portion": "Dose",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/bacardi-1785028050893.jpg",
       "imageAlt": "Bacardi",
       "available": true
     },
@@ -1799,7 +1799,7 @@
       "description": "Dose de Gin Beefeater.",
       "price": 18,
       "portion": "Dose",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/gin-beefeater-1785028302415.jpg",
       "imageAlt": "Gin Beefeater",
       "available": true
     },
@@ -1813,7 +1813,7 @@
       "description": "Dose de Martini.",
       "price": 12,
       "portion": "Dose",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/martini-1785028320622.jpg",
       "imageAlt": "Martini",
       "available": true
     },
@@ -1827,7 +1827,7 @@
       "description": "Dose de Tequila José Cuervo Prata.",
       "price": 20,
       "portion": "Dose",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/tequila-jose-cuervo-prata-1785028358863.jpg",
       "imageAlt": "Tequila José Cuervo Prata",
       "available": true
     },
@@ -1841,7 +1841,7 @@
       "description": "Dose de Tequila José Cuervo Ouro.",
       "price": 20,
       "portion": "Dose",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/tequila-jose-cuervo-ouro-1785028460643.jpg",
       "imageAlt": "Tequila José Cuervo Ouro",
       "available": true
     },
@@ -1855,7 +1855,7 @@
       "description": "Dose de Vodka Absolut.",
       "price": 18,
       "portion": "Dose",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/vodka-absolut-1785028540591.jpg",
       "imageAlt": "Vodka Absolut",
       "available": true
     },
@@ -1869,7 +1869,7 @@
       "description": "Dose de Vodka Smirnoff.",
       "price": 10,
       "portion": "Dose",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/vodka-smirnoff-1785028585082.jpg",
       "imageAlt": "Vodka Smirnoff",
       "available": true
     },
@@ -1883,7 +1883,7 @@
       "description": "Dose de Whisky Singleton.",
       "price": 30,
       "portion": "Dose",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/whisky-singleton-1785028691277.jpg",
       "imageAlt": "Whisky Singleton",
       "available": true
     },
@@ -1897,7 +1897,7 @@
       "description": "Dose de Whisky John Walker Gold.",
       "price": 45,
       "portion": "Dose",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/whisky-john-walker-gold-1785028813584.jpg",
       "imageAlt": "Whisky John Walker Gold",
       "available": true
     },
@@ -1911,7 +1911,7 @@
       "description": "Dose de Whisky Buchanan's.",
       "price": 30,
       "portion": "Dose",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/whisky-buchanan-s-1785028830377.jpg",
       "imageAlt": "Whisky Buchanan's",
       "available": true
     },
@@ -1925,7 +1925,7 @@
       "description": "Dose de Whisky Maker's Mark.",
       "price": 30,
       "portion": "Dose",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/whisky-maker-s-mark-1785028845601.jpg",
       "imageAlt": "Whisky Maker's Mark",
       "available": true
     },
@@ -1939,7 +1939,7 @@
       "description": "Dose de Whisky Glenkinchie.",
       "price": 35,
       "portion": "Dose",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/whisky-glenkinchie-1785028931624.jpg",
       "imageAlt": "Whisky Glenkinchie",
       "available": true
     },
@@ -1953,7 +1953,7 @@
       "description": "Dose de Whisky Gentleman Jack.",
       "price": 35,
       "portion": "Dose",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/whisky-gentleman-jack-1785029061138.jpg",
       "imageAlt": "Whisky Gentleman Jack",
       "available": true
     },
@@ -1967,7 +1967,7 @@
       "description": "Dose de Whisky Bulleit.",
       "price": 30,
       "portion": "Dose",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/whisky-bulleit-1785029195804.jpg",
       "imageAlt": "Whisky Bulleit",
       "available": true
     },
@@ -1981,7 +1981,7 @@
       "description": "Dose de Whisky Jameson.",
       "price": 20,
       "portion": "Dose",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/whisky-jameson-1785029212527.jpg",
       "imageAlt": "Whisky Jameson",
       "available": true
     },
@@ -1995,7 +1995,7 @@
       "description": "Dose de Whisky Jameson IPA.",
       "price": 25,
       "portion": "Dose",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/whisky-jameson-ipa-1785029261009.jpg",
       "imageAlt": "Whisky Jameson IPA",
       "available": true
     },
@@ -2009,7 +2009,7 @@
       "description": "Dose de Whisky Red Label.",
       "price": 18,
       "portion": "Dose",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/whisky-red-label-1785029331233.jpg",
       "imageAlt": "Whisky Red Label",
       "available": true
     },
@@ -2023,7 +2023,7 @@
       "description": "Dose de Whisky Old Parr.",
       "price": 25,
       "portion": "Dose",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/whisky-old-parr-1785029343575.jpg",
       "imageAlt": "Whisky Old Parr",
       "available": true
     },
@@ -2037,7 +2037,7 @@
       "description": "Dose de Whisky Talisker.",
       "price": 60,
       "portion": "Dose",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/whisky-talisker-1785029439160.jpg",
       "imageAlt": "Whisky Talisker",
       "available": true
     },
@@ -2051,7 +2051,7 @@
       "description": "Dose de Whisky Jack Daniels.",
       "price": 20,
       "portion": "Dose",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/whisky-jack-daniels-1785029587382.jpg",
       "imageAlt": "Whisky Jack Daniels",
       "available": true
     },
@@ -2067,7 +2067,7 @@
       "portion": "Dose",
       "imageUrl": "/mock/placeholder.svg",
       "imageAlt": "Whisky Royal Salute",
-      "available": true
+      "available": false
     },
     {
       "id": "destilado-whisky-red-label-garrafa",
@@ -2079,7 +2079,7 @@
       "description": "Garrafa de Whisky Red Label.",
       "price": 200,
       "portion": "Garrafa",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/whisky-red-label-garrafa-1785029768024.jpg",
       "imageAlt": "Whisky Red Label (Garrafa)",
       "available": true
     },
@@ -2093,7 +2093,7 @@
       "description": "Garrafa de Whisky Old Parr.",
       "price": 300,
       "portion": "Garrafa",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/whisky-old-parr-garrafa-1785029806785.jpg",
       "imageAlt": "Whisky Old Parr (Garrafa)",
       "available": true
     },
