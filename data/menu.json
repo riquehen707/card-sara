@@ -798,7 +798,7 @@
       "description": "Molho de tomate pomodoro, queijo muzzarella, carne seca, banana da terra, catupiry e orégano.",
       "price": 79.9,
       "portion": "Pizza",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/pizza-carne-seca-1785105400754.jpg",
       "imageAlt": "Carne Seca",
       "available": true
     },
