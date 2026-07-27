@@ -234,7 +234,7 @@
       "description": "Porção de batata frita.",
       "price": 14.9,
       "portion": "Porção",
-      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/batata-frita-1785107740320.jpg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/batata-frita-1785114863601.jpg",
       "imageAlt": "Batata Frita",
       "available": true
     },
@@ -276,7 +276,7 @@
       "description": "Porção com 6 unidades.",
       "price": 29.9,
       "portion": "6 unidades",
-      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/pastel-1785111090252.jpg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/pastel-1785114850688.jpg",
       "imageAlt": "Pastel",
       "available": true
     },
