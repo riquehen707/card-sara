@@ -220,7 +220,7 @@
       "description": "Camarão ao alho e óleo (300g).",
       "price": 59.9,
       "portion": "300g",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/camarao-alho-e-oleo-1785114359354.jpg",
       "imageAlt": "Camarão",
       "available": true
     },
