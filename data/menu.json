@@ -164,7 +164,7 @@
       "description": "Meia tábua de frios.",
       "price": 69.9,
       "portion": "Meia tábua",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/tabua-de-frios-meia-1785115367520.jpg",
       "imageAlt": "Tábua de Frios (Meia)",
       "available": true
     },
