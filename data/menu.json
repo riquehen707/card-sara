@@ -1400,7 +1400,7 @@
       "description": "Vodka, leite condensado e fruta. Consultar sabores.",
       "price": 29.9,
       "portion": "Drink",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/nevada-1785195338808.jpg",
       "imageAlt": "Nevada",
       "available": true
     },
