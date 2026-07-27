@@ -602,7 +602,7 @@
       "description": "Filé mignon, cogumelos e tomate confit.",
       "price": 69.9,
       "portion": "Prato",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/espaguete-cogumelo-file-mignon-1785114597820.jpg",
       "imageAlt": "Espaguete/Talharim Cogumelo Filé Mignon",
       "available": true
     },
