@@ -376,7 +376,7 @@
       "description": "Carne de Sol com Queijo Coalho.",
       "price": 69.9,
       "portion": "Prato",
-      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/carne-sol-queijo-coalho-1785195399311.jpg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/carne-sol-queijo-coalho-1785195479042.jpg",
       "imageAlt": "Carne de Sol com Queijo Coalho",
       "available": true,
       "accompaniments": [
@@ -1400,7 +1400,7 @@
       "description": "Vodka, leite condensado e fruta. Consultar sabores.",
       "price": 29.9,
       "portion": "Drink",
-      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/nevada-1785195421626.jpg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/nevada-1785194307555.jpg",
       "imageAlt": "Nevada",
       "available": true
     },
