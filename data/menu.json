@@ -340,7 +340,7 @@
       "description": "Ancho (300g).",
       "price": 69.9,
       "portion": "300g",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/ancho-300g-1785113359303.jpg",
       "imageAlt": "Ancho (300g)",
       "available": true,
       "accompaniments": [
