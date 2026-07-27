@@ -276,7 +276,7 @@
       "description": "Porção com 6 unidades.",
       "price": 29.9,
       "portion": "6 unidades",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/pastel-1785111090252.jpg",
       "imageAlt": "Pastel",
       "available": true
     },
@@ -770,7 +770,7 @@
       "description": "Molho de tomate pomodoro, queijo muzzarella, calabresa, azeitonas pretas, cebola e orégano.",
       "price": 65.9,
       "portion": "Pizza",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/pizza-calabresa-1785111207243.jpg",
       "imageAlt": "Calabresa",
       "available": true
     },
