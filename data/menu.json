@@ -2268,15 +2268,15 @@
     {
       "id": "teste",
       "slug": "teste",
-      "name": "Teste",
+      "name": "Napole",
       "categoryId": "entradas",
       "order": 21,
-      "shortDescription": "Teste",
-      "description": "Teste",
-      "price": 65,
-      "portion": "Porção",
-      "imageUrl": "/mock/placeholder.svg",
-      "imageAlt": "Teste",
+      "shortDescription": "Parmesão, azeitona, tomate seco, Manjericão ",
+      "description": "Parmesão, azeitona, tomate seco, Manjericão ",
+      "price": 29.9,
+      "portion": "8 fatias",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/teste-1785276186870.jpg",
+      "imageAlt": "Napole",
       "available": false
     },
     {
