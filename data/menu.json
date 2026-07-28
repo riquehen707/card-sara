@@ -2277,7 +2277,7 @@
       "portion": "8 fatias",
       "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/teste-1785276186870.jpg",
       "imageAlt": "Napole",
-      "available": false
+      "available": true
     },
     {
       "id": "salmao",
