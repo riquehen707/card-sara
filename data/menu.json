@@ -459,7 +459,7 @@
       "description": "Filé Parmegiana.",
       "price": 69.9,
       "portion": "Prato",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/file-parmegiana-1785361972481.jpg",
       "imageAlt": "Filé Parmegiana",
       "available": true
     },
@@ -518,7 +518,7 @@
       "description": "Nhoque Bolonhesa.",
       "price": 44.9,
       "portion": "Prato",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/nhoque-bolonhesa-1785361861772.jpg",
       "imageAlt": "Nhoque Bolonhesa",
       "available": true
     },
