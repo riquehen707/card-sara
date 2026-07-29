@@ -1064,7 +1064,7 @@
       "description": "Molho de tomate pomodoro, queijo mozzarella, camarão, requeijão cremoso e orégano.",
       "price": 79.9,
       "portion": "Calzone",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/calzone-camarao-1785362951259.jpg",
       "imageAlt": "Camarão",
       "available": true
     },
