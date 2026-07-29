@@ -924,7 +924,7 @@
       "description": "Molho de tomate pomodoro, queijo muzzarella, atum, azeitonas pretas e orégano.",
       "price": 69.9,
       "portion": "Pizza",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/pizza-atum-1785284343688.jpg",
       "imageAlt": "Atum",
       "available": true
     },
