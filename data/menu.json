@@ -938,7 +938,7 @@
       "description": "Molho de tomate pomodoro, queijo muzzarella, frango e orégano.",
       "price": 59.9,
       "portion": "Pizza",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/pizza-frango-1785538562693.jpg",
       "imageAlt": "Frango",
       "available": true
     },
