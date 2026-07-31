@@ -1078,7 +1078,7 @@
       "description": "Molho de tomate pomodoro, queijo mozzarella, presunto, queijo gorgonzola, tomate confit e orégano.",
       "price": 79.9,
       "portion": "Calzone",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/calzone-do-cheff-1785538894691.jpg",
       "imageAlt": "Do Cheff",
       "available": true
     },
