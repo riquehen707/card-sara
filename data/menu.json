@@ -122,7 +122,7 @@
       "description": "Bruscheta de camarão.",
       "price": 39.9,
       "portion": "Porção",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/bruscheta-camarao-1785627148458.jpg",
       "imageAlt": "Bruscheta Camarão",
       "available": true
     },
