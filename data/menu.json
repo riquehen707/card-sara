@@ -1022,7 +1022,7 @@
       "description": "Molho de tomate pomodoro, queijo mozzarella, frango, requeijão cremoso e orégano.",
       "price": 69.9,
       "portion": "Calzone",
-      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/calzone-frango-1785538611670.jpg",
+      "imageUrl": "/mock/placeholder.svg",
       "imageAlt": "Frango",
       "available": true
     },
@@ -1036,7 +1036,7 @@
       "description": "Molho de tomate pomodoro, queijo mozzarella, carne seca, banana da terra, requeijão cremoso e orégano.",
       "price": 79.9,
       "portion": "Calzone",
-      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/calzone-carne-seca-1785538600483.jpg",
+      "imageUrl": "/mock/placeholder.svg",
       "imageAlt": "Carne Seca",
       "available": true
     },
@@ -1050,7 +1050,7 @@
       "description": "Molho de tomate pomodoro, queijo mozzarella, cupim, requeijão cremoso e orégano.",
       "price": 79.9,
       "portion": "Calzone",
-      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/calzone-cupim-1785538619358.jpg",
+      "imageUrl": "/mock/placeholder.svg",
       "imageAlt": "Cupim",
       "available": true
     },
@@ -1064,7 +1064,7 @@
       "description": "Molho de tomate pomodoro, queijo mozzarella, camarão, requeijão cremoso e orégano.",
       "price": 79.9,
       "portion": "Calzone",
-      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/calzone-camarao-1785538637710.jpg",
+      "imageUrl": "/mock/placeholder.svg",
       "imageAlt": "Camarão",
       "available": true
     },
