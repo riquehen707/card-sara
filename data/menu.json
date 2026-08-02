@@ -980,7 +980,7 @@
       "description": "Molho de tomate pomodoro, muzzarella, palmito, tomate seco, manjericão e orégano.",
       "price": 79.9,
       "portion": "Pizza",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/pizza-palmito-tomate-seco-1785709928289.jpg",
       "imageAlt": "Palmito com Tomate Seco",
       "available": true
     },
