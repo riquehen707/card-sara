@@ -574,7 +574,7 @@
       "description": "Camarão refogado no azeite e manteiga.",
       "price": 69.9,
       "portion": "Prato",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/espaguete-camarao-alho-oleo-1785629762221.jpg",
       "imageAlt": "Espaguete/Talharim Camarão Alho e Óleo",
       "available": true
     },
@@ -588,7 +588,7 @@
       "description": "Espaguete ou talharim com camarão ao molho formaggi.",
       "price": 79.9,
       "portion": "Prato",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/espaguete-camarao-formaggi-1785629781163.jpg",
       "imageAlt": "Espaguete/Talharim Camarão Formaggi",
       "available": true
     },
