@@ -742,7 +742,7 @@
       "description": "Molho de tomate pomodoro, queijo muzzarella, muzzarella de búfala, presunto de parma, pesto de manjericão, tomate seco, rúcula e orégano.",
       "price": 89.9,
       "portion": "Pizza",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/pizza-parma-tomate-seco-1785633943997.jpg",
       "imageAlt": "Parma com Tomate Seco",
       "available": true
     },
