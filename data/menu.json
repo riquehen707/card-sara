@@ -412,7 +412,7 @@
       "description": "Filé ao Molho Formaggi.",
       "price": 79.9,
       "portion": "Prato",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/file-molho-formaggi-1785886278785.jpg",
       "imageAlt": "Filé ao Molho Formaggi",
       "available": true,
       "accompaniments": [
