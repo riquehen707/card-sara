@@ -1008,7 +1008,7 @@
       "description": "Molho de tomate, queijo muzzarella, catupiry, geleia de frutas vermelhas ou pesto.",
       "price": 79.9,
       "portion": "Pizza",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/pizza-peito-peru-1785975849235.jpg",
       "imageAlt": "Peito de Perú",
       "available": true
     },
