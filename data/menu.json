@@ -616,7 +616,7 @@
       "description": "Espaguete ou talharim à bolonhesa.",
       "price": 34.9,
       "portion": "Prato",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/espaguete-bolonhesa-1786060279487.jpg",
       "imageAlt": "Espaguete/Talharim Bolonhesa",
       "available": true
     },
