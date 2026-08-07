@@ -882,7 +882,7 @@
       "description": "Molho de tomate pomodoro, queijo muzzarella, presunto, tomate confit, cebola, ovos, pimentão e orégano.",
       "price": 69.9,
       "portion": "Pizza",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/pizza-portuguesa-1786144151289.jpg",
       "imageAlt": "Portuguesa",
       "available": true
     },
