@@ -854,7 +854,7 @@
       "description": "Molho de tomate pomodoro, queijo muzzarella, lombo canadense, abacaxi caramelizado e orégano.",
       "price": 69.9,
       "portion": "Pizza",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/pizza-lombo-canadense-1786144124664.jpg",
       "imageAlt": "Lombo Canadense",
       "available": true
     },
