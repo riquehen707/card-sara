@@ -248,7 +248,7 @@
       "description": "Porção de aipim frito.",
       "price": 14.9,
       "portion": "Porção",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/aipim-frito-1786147362659.jpg",
       "imageAlt": "Aipim Frito",
       "available": true
     },
