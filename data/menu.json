@@ -756,7 +756,7 @@
       "description": "Molho de tomate pomodoro, queijo muzzarella, gorgonzola, geleia de damasco, presunto de parma e orégano.",
       "price": 89.9,
       "portion": "Pizza",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/pizza-parma-agridoce-1786229941156.jpg",
       "imageAlt": "Parma Agridoce",
       "available": true
     },
