@@ -1372,7 +1372,7 @@
       "description": "Aperol, xarope de tangerina, prosecco e água com gás.",
       "price": 39.9,
       "portion": "Drink",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/aperol-spritz-1786318287130.jpg",
       "imageAlt": "Aperol Spritz",
       "available": true
     },
