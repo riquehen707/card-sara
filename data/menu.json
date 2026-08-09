@@ -206,7 +206,7 @@
       "description": "Porção com 8 unidades.",
       "price": 39.9,
       "portion": "8 unidades",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/bolinho-de-queijo-1786234956184.jpg",
       "imageAlt": "Bolinho de Queijo",
       "available": true
     },
