@@ -290,7 +290,7 @@
       "description": "Choripan.",
       "price": 34.9,
       "portion": "Porção",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/choripan-1786237789299.jpg",
       "imageAlt": "Choripan",
       "available": true
     },
