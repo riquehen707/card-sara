@@ -433,7 +433,7 @@
       "description": "Carré de Cordeiro.",
       "price": 59.9,
       "portion": "Prato",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/carre-cordeiro-1786233651718.jpg",
       "imageAlt": "Carré de Cordeiro",
       "available": true,
       "accompaniments": [
