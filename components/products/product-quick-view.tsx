@@ -56,6 +56,7 @@ function QuickViewContent({ product }: { product: Product }) {
           fill
           sizes="(min-width: 768px) 360px, 100vw"
           className="object-cover"
+          unoptimized
         />
       </div>
       <div className="space-y-3">
