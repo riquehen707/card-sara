@@ -26,6 +26,7 @@ export function ProductCard({ product, onSelect, href }: ProductCardProps) {
           alt={product.imageAlt}
           width={160}
           height={120}
+          unoptimized
           className={cn(
             "h-full w-full object-cover",
             !product.available && "grayscale"
