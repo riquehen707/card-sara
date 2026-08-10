@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { MessageCircleIcon } from "lucide-react";
 import { useMemo, useState } from "react";
 
 import { PublicHeader } from "@/components/layout/public-header";
@@ -15,11 +16,31 @@ type PublicMenuProps = {
   products: Product[];
 };
 
+function InstagramIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="size-5"
+      aria-hidden="true"
+    >
+      <rect width="18" height="18" x="3" y="3" rx="5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle cx="17.5" cy="6.5" r="0.75" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
+
 export function PublicMenu({
   establishment,
   categories,
   products,
 }: PublicMenuProps) {
+  const whatsappUrl = `https://wa.me/55${establishment.phone.replace(/\D/g, "")}?text=${encodeURIComponent("Vim pelo cardápio")}`;
   const [activeCategoryId, setActiveCategoryId] = useState("todos");
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [quickViewOpen, setQuickViewOpen] = useState(false);
@@ -115,20 +136,30 @@ export function PublicMenu({
                 <dt className="text-xs font-medium uppercase tracking-[0.16em] text-primary/75">
                   Contato
                 </dt>
-                <dd id="fale-conosco" className="leading-6 text-foreground">
-                  <span>{establishment.phone}</span>
+                <dd
+                  id="fale-conosco"
+                  className="mt-2 flex flex-col items-start gap-2 text-foreground"
+                >
+                  <a
+                    href={whatsappUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 rounded-full border border-primary/30 px-3 py-2 font-medium text-primary outline-none transition-colors hover:bg-primary hover:text-primary-foreground focus-visible:ring-[3px] focus-visible:ring-ring/50"
+                    aria-label={`Enviar mensagem para a Formaggi pelo WhatsApp no número ${establishment.phone}`}
+                  >
+                    <MessageCircleIcon className="size-5" aria-hidden="true" />
+                    WhatsApp
+                  </a>
                   {establishment.instagram && (
-                    <>
-                      <br />
-                      <a
-                        href={establishment.instagram}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="text-primary underline-offset-4 outline-none hover:underline focus-visible:rounded-sm focus-visible:ring-[3px] focus-visible:ring-ring/50"
-                      >
-                        Instagram
-                      </a>
-                    </>
+                    <a
+                      href={establishment.instagram}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-2 rounded-full bg-primary px-3 py-2 font-semibold text-primary-foreground outline-none transition-opacity hover:opacity-90 focus-visible:ring-[3px] focus-visible:ring-ring/50"
+                    >
+                      <InstagramIcon />
+                      Instagram
+                    </a>
                   )}
                 </dd>
               </div>
