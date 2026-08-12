@@ -966,7 +966,7 @@
       "description": "Molho de tomate pomodoro, queijo muzzarella, frango, cheddar e farofa de bacon.",
       "price": 79.9,
       "portion": "Pizza",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/pizza-frango-bacon-cheddar-1786575040070.jpg",
       "imageAlt": "Frango Bacon Cheddar",
       "available": true
     },
