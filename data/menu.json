@@ -658,7 +658,7 @@
       "description": "Panqueca gratinada. Opções de recheio: carne ou frango.",
       "price": 34.9,
       "portion": "Prato",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/panqueca-gratinada-1786582793236.jpg",
       "imageAlt": "Panqueca Gratinada",
       "available": true
     },
@@ -1120,7 +1120,7 @@
       "description": "Pizza doce sabor M&M.",
       "price": 69.9,
       "portion": "Pizza doce",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/pizza-doce-mm-1786582771315.jpg",
       "imageAlt": "M&M",
       "available": true
     },
