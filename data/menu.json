@@ -1176,7 +1176,7 @@
       "description": "Sobremesa Delícia Gelada.",
       "price": 24.9,
       "portion": "Porção",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/delicia-gelada-1786841541889.jpg",
       "imageAlt": "Delícia Gelada",
       "available": true
     },
