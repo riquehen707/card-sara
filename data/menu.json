@@ -150,7 +150,7 @@
       "description": "Queijos: mozzarella argentina, parmesão e gorgonzola. Salame, presunto de parma e damasco desidratado.",
       "price": 109.9,
       "portion": "Tábua",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/tabua-de-frios-1786840560090.jpg",
       "imageAlt": "Tábua de Frios",
       "available": true
     },
@@ -532,7 +532,7 @@
       "description": "Nhoque Formaggi.",
       "price": 49.9,
       "portion": "Prato",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/nhoque-formaggi-1786840496627.jpg",
       "imageAlt": "Nhoque Formaggi",
       "available": true
     },
