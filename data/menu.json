@@ -504,7 +504,7 @@
       "description": "Nhoque Pomodoro.",
       "price": 39.9,
       "portion": "Prato",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/nhoque-pomodoro-1786844949047.jpg",
       "imageAlt": "Nhoque Pomodoro",
       "available": true
     },
