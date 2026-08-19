@@ -5,6 +5,7 @@ const githubRepo = process.env.GITHUB_REPO ?? "card-sara";
 
 const nextConfig: NextConfig = {
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: "https",
