@@ -1106,7 +1106,7 @@
       "description": "Pizza doce sabor Oreo.",
       "price": 69.9,
       "portion": "Pizza doce",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/pizza-doce-oreo-1787528461000.jpg",
       "imageAlt": "Oreo",
       "available": true
     },
