@@ -108,7 +108,7 @@
       "description": "Bruscheta tradicional.",
       "price": 29.9,
       "portion": "Porção",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/bruscheta-tradicional-1788045536337.jpg",
       "imageAlt": "Bruscheta Tradicional",
       "available": true
     },
