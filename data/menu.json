@@ -2376,6 +2376,20 @@
       "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/stella-puro-gold-1785032998714.jpg",
       "imageAlt": "stella puro gold",
       "available": true
+    },
+    {
+      "id": "soda-artesanal-2",
+      "slug": "soda-artesanal-2",
+      "name": "Soda Artesanal",
+      "categoryId": "drinks",
+      "order": 20,
+      "shortDescription": "Agua com gás e xarope...consulta xaropes com garçom.",
+      "description": "Agua com gás e xarope...consulta xaropes com garçom.",
+      "price": 18.9,
+      "portion": "Porção",
+      "imageUrl": "/mock/placeholder.svg",
+      "imageAlt": "Soda Artesanal",
+      "available": true
     }
   ]
 }
