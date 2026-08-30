@@ -812,7 +812,7 @@
       "description": "Molho de tomate pomodoro, queijo muzzarella, tomate fresco, alho confitado com ervas frescas, queijo parmesão e orégano.",
       "price": 69.9,
       "portion": "Pizza",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/pizza-napolitana-1788125035087.jpg",
       "imageAlt": "Napolitana",
       "available": true
     },
