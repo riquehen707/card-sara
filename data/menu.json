@@ -2390,6 +2390,20 @@
       "imageUrl": "/mock/placeholder.svg",
       "imageAlt": "Soda Artesanal",
       "available": true
+    },
+    {
+      "id": "suco-bifasico",
+      "slug": "suco-bifasico",
+      "name": "Suco Bifásico Natural 350ml",
+      "categoryId": "bebidas",
+      "order": 13,
+      "shortDescription": "Laraja e morango",
+      "description": "Laraja e morango",
+      "price": 19.9,
+      "portion": "Porção",
+      "imageUrl": "/mock/placeholder.svg",
+      "imageAlt": "Suco Bifásico Natural 350ml",
+      "available": true
     }
   ]
 }
