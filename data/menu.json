@@ -2404,6 +2404,20 @@
       "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/suco-bifasico-1788139548280.jpg",
       "imageAlt": "Suco Bifásico Natural 350ml",
       "available": true
+    },
+    {
+      "id": "brahma",
+      "slug": "brahma",
+      "name": "Brahma",
+      "categoryId": "cervejas",
+      "order": 20,
+      "shortDescription": "Brahma",
+      "description": "Brahma",
+      "price": 13.9,
+      "portion": "Porção",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/brahma-1788475892294.jpg",
+      "imageAlt": "Brahma",
+      "available": true
     }
   ]
 }
