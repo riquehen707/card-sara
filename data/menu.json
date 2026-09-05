@@ -714,7 +714,7 @@
       "description": "Molho de tomate pomodoro, queijo muzzarella, salame, azeitonas pretas e orégano.",
       "price": 69.9,
       "portion": "Pizza",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/pizza-salame-1788643613529.jpg",
       "imageAlt": "Salame",
       "available": true
     },
