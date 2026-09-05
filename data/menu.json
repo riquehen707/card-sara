@@ -1330,7 +1330,7 @@
       "description": "Xarope de curaçau blue, tônica e especiarias.",
       "price": 29.9,
       "portion": "Drink",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/lagoa-azul-1788650320520.jpg",
       "imageAlt": "Lagoa Azul",
       "available": true
     },
