@@ -80,7 +80,7 @@
       "description": "Queijo brie, tomate cereja e manjericão salteado no forno a lenha. Acompanha fatias de pão rústico.",
       "price": 59.9,
       "portion": "Porção",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/trento-1788652822472.jpg",
       "imageAlt": "Trento",
       "available": true
     },
