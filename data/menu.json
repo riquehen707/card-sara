@@ -910,7 +910,7 @@
       "description": "Molho de tomate pomodoro, muzzarella de búfala, cogumelos frescos e orégano.",
       "price": 79.9,
       "portion": "Pizza",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/pizza-cogumelos-1788736646416.jpg",
       "imageAlt": "Cogumelos",
       "available": true
     },
