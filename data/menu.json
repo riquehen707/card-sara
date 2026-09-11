@@ -1204,7 +1204,7 @@
       "description": "Gin, xarope de frutas vermelhas, suco de limão siciliano, xarope de hibisco, tônica, espuma de morango e frutas para decorar.",
       "price": 39.9,
       "portion": "Drink",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/pink-1789086175640.jpg",
       "imageAlt": "Pink",
       "available": true
     },
