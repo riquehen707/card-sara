@@ -2387,7 +2387,7 @@
       "description": "Agua com gás e xarope...consulta xaropes com garçom.",
       "price": 18.9,
       "portion": "Porção",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/soda-artesanal-2-1789173739804.jpg",
       "imageAlt": "Soda Artesanal",
       "available": true
     },
