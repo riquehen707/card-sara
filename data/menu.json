@@ -2418,6 +2418,20 @@
       "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/brahma-1788475892294.jpg",
       "imageAlt": "Brahma",
       "available": true
+    },
+    {
+      "id": "ravioli-carne-ou-quejo",
+      "slug": "ravioli-carne-ou-quejo",
+      "name": "Ravioli (carne ou quejo",
+      "categoryId": "pratos",
+      "order": 17,
+      "shortDescription": "bolonhesa.",
+      "description": "bolonhesa.",
+      "price": 49.9,
+      "portion": "Porção",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/novo-produto-1789256658962.jpg",
+      "imageAlt": "Ravioli (carne ou quejo",
+      "available": true
     }
   ]
 }
