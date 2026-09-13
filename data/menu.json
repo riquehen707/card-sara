@@ -556,11 +556,11 @@
       "name": "Ravioli (Carne ou Queijo)",
       "categoryId": "pratos",
       "order": 8,
-      "shortDescription": "Molho pesto ou formaggi.",
-      "description": "Molho pesto ou formaggi.",
+      "shortDescription": "Molho pesto ",
+      "description": "Molho pesto ",
       "price": 59.9,
       "portion": "Prato",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/ravioli-pesto-formaggi-1789341336749.jpg",
       "imageAlt": "Ravioli (Carne ou Queijo)",
       "available": true
     },
@@ -1176,7 +1176,7 @@
       "description": "Sobremesa Delícia Gelada.",
       "price": 24.9,
       "portion": "Porção",
-      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/delicia-gelada-1786841685979.jpg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/delicia-gelada-1789341465270.jpg",
       "imageAlt": "Delícia Gelada",
       "available": true
     },
@@ -2431,6 +2431,34 @@
       "portion": "Porção",
       "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/novo-produto-1789256658962.jpg",
       "imageAlt": "Ravioli (carne ou quejo",
+      "available": true
+    },
+    {
+      "id": "camarao-crocante",
+      "slug": "camarao-crocante",
+      "name": "Camarão crocante",
+      "categoryId": "entradas",
+      "order": 22,
+      "shortDescription": "porção 8 unidades.",
+      "description": "porção 8 unidades.",
+      "price": 79.9,
+      "portion": "Porção",
+      "imageUrl": "/mock/placeholder.svg",
+      "imageAlt": "Camarão crocante",
+      "available": true
+    },
+    {
+      "id": "ravioli-carne-ou-queijo",
+      "slug": "ravioli-carne-ou-queijo",
+      "name": "Ravioli (carne ou queijo)",
+      "categoryId": "pratos",
+      "order": 18,
+      "shortDescription": "Ao molho formaggi",
+      "description": "Ao molho formaggi",
+      "price": 59.9,
+      "portion": "Porção",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/novo-produto-1789341354165.jpg",
+      "imageAlt": "Ravioli (carne ou queijo)",
       "available": true
     }
   ]
