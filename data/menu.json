@@ -2432,6 +2432,20 @@
       "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/novo-produto-1789256658962.jpg",
       "imageAlt": "Ravioli (carne ou quejo",
       "available": true
+    },
+    {
+      "id": "ravioli-carne-ou-queijo",
+      "slug": "ravioli-carne-ou-queijo",
+      "name": "Ravioli(Carne ou Queijo)",
+      "categoryId": "pratos",
+      "order": 18,
+      "shortDescription": "Ravioli(Carne ou Queijo)",
+      "description": "Ravioli(Carne ou Queijo)",
+      "price": 59.9,
+      "portion": "Porção",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/novo-produto-1789345747951.jpg",
+      "imageAlt": "Ravioli(Carne ou Queijo)",
+      "available": true
     }
   ]
 }
