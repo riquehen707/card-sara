@@ -556,11 +556,11 @@
       "name": "Ravioli (Carne ou Queijo)",
       "categoryId": "pratos",
       "order": 8,
-      "shortDescription": "Molho pesto .",
-      "description": "Molho pesto .",
+      "shortDescription": "Molho pesto.",
+      "description": "Molho pesto.",
       "price": 59.9,
       "portion": "Prato",
-      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/ravioli-pesto-formaggi-1789342215759.jpg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/ravioli-pesto-formaggi-1789345685483.jpg",
       "imageAlt": "Ravioli (Carne ou Queijo)",
       "available": true
     },
@@ -1176,7 +1176,7 @@
       "description": "Sobremesa Delícia Gelada.",
       "price": 24.9,
       "portion": "Porção",
-      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/delicia-gelada-1789342306114.jpg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/delicia-gelada-1786841685979.jpg",
       "imageAlt": "Delícia Gelada",
       "available": true
     },
@@ -2431,20 +2431,6 @@
       "portion": "Porção",
       "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/novo-produto-1789256658962.jpg",
       "imageAlt": "Ravioli (carne ou quejo",
-      "available": true
-    },
-    {
-      "id": "ravioli-carne-ou-queijo",
-      "slug": "ravioli-carne-ou-queijo",
-      "name": "Ravioli (Carne ou queijo)",
-      "categoryId": "pratos",
-      "order": 18,
-      "shortDescription": "ao molho formaggi",
-      "description": "ao molho formaggi",
-      "price": 59.9,
-      "portion": "Porção",
-      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/novo-produto-1789342237745.jpg",
-      "imageAlt": "Ravioli (Carne ou queijo)",
       "available": true
     }
   ]
