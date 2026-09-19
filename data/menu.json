@@ -2534,7 +2534,7 @@
       "description": "Asinha frango",
       "price": 39.9,
       "portion": "Porção",
-      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/tulipa-1789853080840.jpg",
+      "imageUrl": "/mock/placeholder.svg",
       "imageAlt": "Tulipa",
       "available": true
     },
@@ -2548,7 +2548,7 @@
       "description": "costelinha 300g",
       "price": 39.9,
       "portion": "Porção",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/costelinha-de-porco-1789861265754.jpg",
       "imageAlt": "Costelinha de porco",
       "available": true
     }
