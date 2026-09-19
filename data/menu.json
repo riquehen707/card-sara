@@ -2509,6 +2509,20 @@
       "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/novo-produto-1789851311182.jpg",
       "imageAlt": "blend cheddar",
       "available": true
+    },
+    {
+      "id": "iscas-de-alcatra",
+      "slug": "iscas-de-alcatra",
+      "name": "Iscas de Alcatra",
+      "categoryId": "entradas",
+      "order": 22,
+      "shortDescription": "iscas de alcatra, acebolada",
+      "description": "iscas de alcatra, acebolada",
+      "price": 49.9,
+      "portion": "Porção",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/iscas-de-alcatra-1789851729195.jpg",
+      "imageAlt": "Iscas de Alcatra",
+      "available": true
     }
   ]
 }
