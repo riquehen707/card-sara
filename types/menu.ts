@@ -15,7 +15,17 @@ export const categorySchema = z.object({
   name: z.string().min(1),
   order: z.number().optional(),
   description: z.string().optional(),
+  highlightType: z
+    .enum(["recommended", "new", "promotion", "featured"])
+    .optional(),
 });
+
+export const highlightTypeSchema = z.enum([
+  "recommended",
+  "new",
+  "promotion",
+  "featured",
+]);
 
 export const productAccompanimentSchema = z.object({
   id: z.string().min(1),
@@ -39,6 +49,7 @@ export const productSchema = z.object({
   available: z.boolean(),
   isNew: z.boolean().optional(),
   isPromotional: z.boolean().optional(),
+  highlightType: highlightTypeSchema.optional(),
   accompaniments: z.array(productAccompanimentSchema).optional(),
   notes: z.string().optional(),
 });
@@ -51,6 +62,7 @@ export const menuDataSchema = z.object({
 
 export type Establishment = z.infer<typeof establishmentSchema>;
 export type Category = z.infer<typeof categorySchema>;
+export type HighlightType = z.infer<typeof highlightTypeSchema>;
 export type ProductAccompaniment = z.infer<
   typeof productAccompanimentSchema
 >;

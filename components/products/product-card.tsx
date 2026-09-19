@@ -13,11 +13,16 @@ type ProductCardProps = {
 };
 
 export function ProductCard({ product, onSelect, href }: ProductCardProps) {
-  const badgeLabel = product.isPromotional
-    ? "Promoção"
-    : product.isNew
-      ? "Novo"
-      : null;
+  const badgeLabel =
+    product.highlightType === "promotion" || product.isPromotional
+      ? "Promoção"
+      : product.highlightType === "new" || product.isNew
+        ? "Lançamento"
+        : product.highlightType === "featured"
+          ? "Destaque"
+          : product.highlightType === "recommended"
+            ? "Recomendado"
+            : null;
   const content = (
     <>
       <div className="relative h-24 w-28 shrink-0 overflow-hidden rounded-lg border border-primary/20 bg-secondary sm:h-28 sm:w-32">
@@ -44,7 +49,11 @@ export function ProductCard({ product, onSelect, href }: ProductCardProps) {
           </h2>
           {badgeLabel && (
             <Badge
-              variant={product.isPromotional ? "default" : "secondary"}
+              variant={
+                product.highlightType === "promotion" || product.isPromotional
+                  ? "default"
+                  : "secondary"
+              }
               className="h-6 shrink-0 rounded-full px-2 text-[11px]"
             >
               {badgeLabel}

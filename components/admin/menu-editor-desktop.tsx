@@ -47,7 +47,13 @@ import { Textarea } from "@/components/ui/textarea";
 import { ProductImageField } from "@/components/admin/product-image-field";
 import { formatCurrency } from "@/lib/menu-utils";
 import { cn } from "@/lib/utils";
-import type { Category, MenuData, Product, ProductAccompaniment } from "@/types/menu";
+import type {
+  Category,
+  HighlightType,
+  MenuData,
+  Product,
+  ProductAccompaniment,
+} from "@/types/menu";
 import { menuDataSchema } from "@/types/menu";
 
 type MenuEditorDesktopProps = {
@@ -72,7 +78,19 @@ type NewProductForm = {
   imageUrl: string;
 };
 
-type ProductStatusFilter = "todos" | "alterados" | "indisponiveis";
+type ProductStatusFilter =
+  | "todos"
+  | "alterados"
+  | "indisponiveis"
+  | "destaques";
+
+const highlightOptions: { value: HighlightType | "none"; label: string }[] = [
+  { value: "none", label: "Sem destaque" },
+  { value: "recommended", label: "Recomendado" },
+  { value: "new", label: "Lançamento" },
+  { value: "promotion", label: "Promoção" },
+  { value: "featured", label: "Destaque" },
+];
 
 const draftStorageKey = "cardapio-sara-admin-draft-v1";
 const adminSessionStorageKey = "cardapio-sara-admin-session";
@@ -147,7 +165,7 @@ function getProductChangeState(product: ProductDraft, original?: Product) {
     : "changed";
 }
 
-function countChanges(products: ProductDraft[], originalProducts: Product[]) {
+function countProductChanges(products: ProductDraft[], originalProducts: Product[]) {
   const originalById = new Map(
     originalProducts.map((product) => [product.id, product])
   );
@@ -157,6 +175,19 @@ function countChanges(products: ProductDraft[], originalProducts: Product[]) {
     const state = getProductChangeState(product, original);
     return state === "unchanged" ? total : total + 1;
   }, 0);
+}
+
+function countCategoryChanges(categories: Category[], originalCategories: Category[]) {
+  const originalById = new Map(
+    originalCategories.map((category) => [category.id, category])
+  );
+  const currentIds = new Set(categories.map((category) => category.id));
+  const changedOrAdded = categories.filter(
+    (category) => JSON.stringify(category) !== JSON.stringify(originalById.get(category.id))
+  ).length;
+  const removed = originalCategories.filter((category) => !currentIds.has(category.id)).length;
+
+  return changedOrAdded + removed;
 }
 
 function buildPublishMenuData(draft: DraftMenuData): MenuData {
@@ -282,6 +313,14 @@ function getStatusLabel(status: string) {
   return "Publicado";
 }
 
+function getHighlightLabel(product: Product) {
+  const type =
+    product.highlightType ??
+    (product.isPromotional ? "promotion" : product.isNew ? "new" : undefined);
+
+  return highlightOptions.find((option) => option.value === type)?.label;
+}
+
 export function MenuEditorDesktop({
   initialMenuData,
 }: MenuEditorDesktopProps) {
@@ -300,6 +339,8 @@ export function MenuEditorDesktop({
   );
   const [priceErrors, setPriceErrors] = useState<PriceErrors>({});
   const [newProductOpen, setNewProductOpen] = useState(false);
+  const [newCategoryOpen, setNewCategoryOpen] = useState(false);
+  const [newCategoryName, setNewCategoryName] = useState("");
   const [newProduct, setNewProduct] = useState<NewProductForm>({
     name: "",
     description: "",
@@ -365,6 +406,15 @@ export function MenuEditorDesktop({
           return false;
         }
 
+        if (
+          statusFilter === "destaques" &&
+          !product.highlightType &&
+          !product.isNew &&
+          !product.isPromotional
+        ) {
+          return false;
+        }
+
         if (!normalizedQuery) {
           return true;
         }
@@ -399,6 +449,9 @@ export function MenuEditorDesktop({
     draft.products.find((product) => product.id === selectedProductId) ??
     visibleProducts[0] ??
     draft.products[0];
+  const selectedCategory = draft.categories.find(
+    (category) => category.id === categoryId
+  );
 
   const selectedOriginal = selectedProduct
     ? originalProductsById.get(selectedProduct.id)
@@ -406,10 +459,17 @@ export function MenuEditorDesktop({
   const selectedState = selectedProduct
     ? getProductChangeState(selectedProduct, selectedOriginal)
     : "unchanged";
-  const changeCount = countChanges(draft.products, initialMenuData.products);
+  const changeCount =
+    countProductChanges(draft.products, initialMenuData.products) +
+    countCategoryChanges(draft.categories, initialMenuData.categories);
   const hasPriceErrors = Object.values(priceErrors).some(Boolean);
   const unavailableCount = draft.products.filter(
     (product) => !product.available && !product.removed
+  ).length;
+  const highlightedCount = draft.products.filter(
+    (product) =>
+      !product.removed &&
+      Boolean(product.highlightType || product.isNew || product.isPromotional)
   ).length;
 
   function updateProduct(
@@ -422,6 +482,54 @@ export function MenuEditorDesktop({
         product.id === productId ? updater(product) : product
       ),
     }));
+    setPublishMessage(null);
+  }
+
+  function updateCategory(
+    categoryIdToUpdate: string,
+    updater: (category: Category) => Category
+  ) {
+    setDraft((currentDraft) => ({
+      ...currentDraft,
+      categories: currentDraft.categories.map((category) =>
+        category.id === categoryIdToUpdate ? updater(category) : category
+      ),
+    }));
+    setPublishMessage(null);
+  }
+
+  function addCategory() {
+    const name = newCategoryName.trim();
+
+    if (!name) {
+      setPublishMessage("Informe o nome da categoria.");
+      return;
+    }
+
+    const baseId = createSlug(name) || "categoria";
+    const existingIds = new Set(draft.categories.map((category) => category.id));
+    let id = baseId;
+    let suffix = 2;
+
+    while (existingIds.has(id)) {
+      id = `${baseId}-${suffix}`;
+      suffix += 1;
+    }
+
+    const category: Category = {
+      id,
+      name,
+      order: Math.max(0, ...draft.categories.map((item) => item.order ?? 0)) + 1,
+    };
+
+    setDraft((currentDraft) => ({
+      ...currentDraft,
+      categories: [...currentDraft.categories, category],
+    }));
+    setCategoryId(id);
+    setNewProduct((currentProduct) => ({ ...currentProduct, categoryId: id }));
+    setNewCategoryName("");
+    setNewCategoryOpen(false);
     setPublishMessage(null);
   }
 
@@ -631,7 +739,7 @@ export function MenuEditorDesktop({
   return (
     <div className="min-h-dvh bg-secondary/30">
       <header className="sticky top-0 z-30 border-b bg-background">
-        <div className="mx-auto flex min-h-20 w-full max-w-[1500px] items-center justify-between gap-6 px-6 py-3">
+        <div className="mx-auto flex min-h-16 w-full max-w-[1500px] flex-wrap items-center justify-between gap-3 px-4 py-3 sm:px-6">
           <div className="flex min-w-0 items-center gap-4">
             <Button
               asChild
@@ -653,7 +761,7 @@ export function MenuEditorDesktop({
               </p>
             </div>
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-1.5 sm:gap-3">
             <div
               className={cn(
                 "hidden items-center gap-2 rounded-full border px-3 py-2 text-sm md:flex",
@@ -708,18 +816,25 @@ export function MenuEditorDesktop({
               variant="ghost"
               onClick={discardChanges}
               disabled={changeCount === 0 || publishing}
+              className="hidden sm:inline-flex"
             >
               Descartar
             </Button>
-            <Button type="button" variant="ghost" size="sm" onClick={logout}>
+            <Button
+              type="button"
+              variant="ghost"
+              size="icon"
+              onClick={logout}
+              aria-label="Sair da administração"
+              title="Sair"
+            >
               <LogOutIcon className="size-4" aria-hidden="true" />
-              Sair
             </Button>
           </div>
         </div>
       </header>
 
-      <main className="mx-auto grid w-full max-w-[1500px] gap-5 px-6 py-5 xl:grid-cols-[260px_minmax(0,1fr)_400px]">
+      <main className="mx-auto grid w-full max-w-[1500px] gap-5 px-4 py-5 sm:px-6 xl:grid-cols-[260px_minmax(0,1fr)_400px]">
         <aside className="xl:sticky xl:top-[100px] xl:self-start">
           <section className="rounded-xl border bg-card p-4 shadow-xs">
             <div className="mb-4">
@@ -728,12 +843,12 @@ export function MenuEditorDesktop({
                 Escolha uma seção.
               </p>
             </div>
-            <div className="grid gap-1.5">
+            <div className="flex gap-1.5 overflow-x-auto pb-1 xl:grid xl:overflow-visible xl:pb-0">
               <button
                 type="button"
                 onClick={() => setCategoryId("todos")}
                 className={cn(
-                  "flex min-h-11 items-center justify-between rounded-lg px-3 text-left text-sm outline-none hover:bg-secondary focus-visible:ring-[3px] focus-visible:ring-ring/50",
+                  "flex min-h-11 shrink-0 items-center justify-between rounded-lg px-3 text-left text-sm outline-none hover:bg-secondary focus-visible:ring-[3px] focus-visible:ring-ring/50 xl:shrink",
                   categoryId === "todos" && "bg-secondary font-medium"
                 )}
               >
@@ -748,7 +863,7 @@ export function MenuEditorDesktop({
                   type="button"
                   onClick={() => setCategoryId(category.id)}
                   className={cn(
-                    "flex min-h-11 items-center justify-between rounded-lg px-3 text-left text-sm outline-none hover:bg-secondary focus-visible:ring-[3px] focus-visible:ring-ring/50",
+                    "flex min-h-11 shrink-0 items-center justify-between rounded-lg px-3 text-left text-sm outline-none hover:bg-secondary focus-visible:ring-[3px] focus-visible:ring-ring/50 xl:shrink",
                     categoryId === category.id && "bg-secondary font-medium"
                   )}
                 >
@@ -759,8 +874,78 @@ export function MenuEditorDesktop({
                 </button>
               ))}
             </div>
+            <Button
+              type="button"
+              variant="outline"
+              className="mt-4 w-full"
+              onClick={() => setNewCategoryOpen(true)}
+            >
+              <PlusIcon className="size-4" aria-hidden="true" />
+              Adicionar categoria
+            </Button>
           </section>
 
+          {selectedCategory && (
+            <section className="mt-4 grid gap-4 rounded-xl border bg-card p-4 shadow-xs">
+              <div>
+                <h2 className="text-base font-semibold">Categoria selecionada</h2>
+                <p className="mt-1 text-sm text-muted-foreground">
+                  Edite sua apresentação e o destaque no cardápio.
+                </p>
+              </div>
+              <div className="grid gap-2">
+                <Label htmlFor="selected-category-name">Nome</Label>
+                <Input
+                  id="selected-category-name"
+                  value={selectedCategory.name}
+                  onChange={(event) =>
+                    updateCategory(selectedCategory.id, (category) => ({
+                      ...category,
+                      name: event.target.value,
+                    }))
+                  }
+                />
+              </div>
+              <div className="grid gap-2">
+                <Label htmlFor="selected-category-description">Descrição</Label>
+                <Textarea
+                  id="selected-category-description"
+                  value={selectedCategory.description ?? ""}
+                  onChange={(event) =>
+                    updateCategory(selectedCategory.id, (category) => ({
+                      ...category,
+                      description: event.target.value || undefined,
+                    }))
+                  }
+                  className="min-h-20 resize-y"
+                />
+              </div>
+              <div className="grid gap-2">
+                <Label htmlFor="selected-category-highlight">Destaque</Label>
+                <Select
+                  value={selectedCategory.highlightType ?? "none"}
+                  onValueChange={(value) =>
+                    updateCategory(selectedCategory.id, (category) => ({
+                      ...category,
+                      highlightType:
+                        value === "none" ? undefined : (value as HighlightType),
+                    }))
+                  }
+                >
+                  <SelectTrigger id="selected-category-highlight">
+                    <SelectValue />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {highlightOptions.map((option) => (
+                      <SelectItem key={option.value} value={option.value}>
+                        {option.label}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
+            </section>
+          )}
         </aside>
 
         <section className="grid min-w-0 gap-4">
@@ -774,7 +959,11 @@ export function MenuEditorDesktop({
                   Busque, altere preços e controle a disponibilidade.
                 </p>
               </div>
-              <Button size="lg" onClick={() => setNewProductOpen(true)}>
+              <Button
+                className="w-full sm:w-auto"
+                size="lg"
+                onClick={() => setNewProductOpen(true)}
+              >
                 <PlusIcon className="size-4" aria-hidden="true" />
                 Adicionar produto
               </Button>
@@ -799,6 +988,7 @@ export function MenuEditorDesktop({
                   ["todos", "Todos", draft.products.length],
                   ["alterados", "Alterados", changedProductIds.size],
                   ["indisponiveis", "Indisponíveis", unavailableCount],
+                  ["destaques", "Destaques", highlightedCount],
                 ].map(([value, label, count]) => (
                   <Button
                     key={value}
@@ -881,6 +1071,18 @@ export function MenuEditorDesktop({
                                   />
                                 )}
                                 <span>{product.name}</span>
+                                {getHighlightLabel(product) && (
+                                  <Badge
+                                    variant={
+                                      product.highlightType === "promotion" ||
+                                      product.isPromotional
+                                        ? "default"
+                                        : "secondary"
+                                    }
+                                  >
+                                    {getHighlightLabel(product)}
+                                  </Badge>
+                                )}
                               </span>
                               <span className="line-clamp-2 text-sm leading-5 text-muted-foreground">
                                 {product.description}
@@ -1101,6 +1303,40 @@ export function MenuEditorDesktop({
                   />
                 </div>
 
+                <div className="grid gap-3 border-b pb-6">
+                  <Label htmlFor="selected-product-highlight">Destaque no cardápio</Label>
+                  <Select
+                    value={selectedProduct.highlightType ?? "none"}
+                    onValueChange={(value) =>
+                      updateProduct(selectedProduct.id, (product) => ({
+                        ...product,
+                        highlightType:
+                          value === "none" ? undefined : (value as HighlightType),
+                        isNew: value === "new" ? true : undefined,
+                        isPromotional: value === "promotion" ? true : undefined,
+                      }))
+                    }
+                    disabled={selectedProduct.removed}
+                  >
+                    <SelectTrigger
+                      id="selected-product-highlight"
+                      className="h-12 border-transparent bg-secondary/40 text-base"
+                    >
+                      <SelectValue />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {highlightOptions.map((option) => (
+                        <SelectItem key={option.value} value={option.value}>
+                          {option.label}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                  <p className="text-xs leading-5 text-muted-foreground">
+                    Produtos destacados aparecem na vitrine. Uma categoria destacada inclui todos os seus produtos disponíveis.
+                  </p>
+                </div>
+
                 {selectedState !== "unchanged" && (
                   <Button
                     type="button"
@@ -1237,6 +1473,33 @@ export function MenuEditorDesktop({
             </div>
             <Button type="button" onClick={addProduct}>
               Adicionar
+            </Button>
+          </div>
+        </DialogContent>
+      </Dialog>
+
+      <Dialog open={newCategoryOpen} onOpenChange={setNewCategoryOpen}>
+        <DialogContent className="max-w-md">
+          <DialogHeader>
+            <DialogTitle>Adicionar categoria</DialogTitle>
+          </DialogHeader>
+          <div className="grid gap-4">
+            <div className="grid gap-2">
+              <Label htmlFor="new-category-name">Nome da categoria</Label>
+              <Input
+                id="new-category-name"
+                value={newCategoryName}
+                onChange={(event) => setNewCategoryName(event.target.value)}
+                onKeyDown={(event) => {
+                  if (event.key === "Enter") addCategory();
+                }}
+                placeholder="Ex.: Veganos"
+                autoFocus
+              />
+            </div>
+            <Button type="button" onClick={addCategory}>
+              <PlusIcon className="size-4" aria-hidden="true" />
+              Adicionar categoria
             </Button>
           </div>
         </DialogContent>

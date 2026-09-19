@@ -6,6 +6,7 @@ import { useMemo, useState } from "react";
 
 import { PublicHeader } from "@/components/layout/public-header";
 import { CategoryTabs } from "@/components/menu/category-tabs";
+import { MenuHighlights } from "@/components/menu/menu-highlights";
 import { ProductList } from "@/components/products/product-list";
 import { ProductQuickView } from "@/components/products/product-quick-view";
 import type { Category, Establishment, Product } from "@/types/menu";
@@ -89,6 +90,12 @@ export function PublicMenu({
       />
 
       <main className="flex-1 pb-10">
+        <MenuHighlights
+          categories={categories}
+          products={products}
+          onProductSelect={openQuickView}
+        />
+
         <section
           className="mx-auto w-full max-w-2xl px-5 py-10 sm:py-12"
           aria-labelledby="restaurant-title"
