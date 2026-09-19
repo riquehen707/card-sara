@@ -2523,6 +2523,34 @@
       "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/iscas-de-alcatra-1789851729195.jpg",
       "imageAlt": "Iscas de Alcatra",
       "available": true
+    },
+    {
+      "id": "tulipa",
+      "slug": "tulipa",
+      "name": "Tulipa",
+      "categoryId": "entradas",
+      "order": 23,
+      "shortDescription": "Asinha frango",
+      "description": "Asinha frango",
+      "price": 39.9,
+      "portion": "Porção",
+      "imageUrl": "/mock/placeholder.svg",
+      "imageAlt": "Tulipa",
+      "available": true
+    },
+    {
+      "id": "costelinha-de-porco",
+      "slug": "costelinha-de-porco",
+      "name": "Costelinha de porco",
+      "categoryId": "entradas",
+      "order": 24,
+      "shortDescription": "costelinha 300g",
+      "description": "costelinha 300g",
+      "price": 39.9,
+      "portion": "Porção",
+      "imageUrl": "/mock/placeholder.svg",
+      "imageAlt": "Costelinha de porco",
+      "available": true
     }
   ]
 }
