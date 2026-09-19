@@ -2534,7 +2534,7 @@
       "description": "Asinha frango",
       "price": 39.9,
       "portion": "Porção",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/tulipa-1789853080840.jpg",
       "imageAlt": "Tulipa",
       "available": true
     },
