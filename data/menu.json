@@ -67,6 +67,13 @@
       "name": "Bebidas",
       "order": 10,
       "description": "Água, refrigerantes, sucos e bebidas não alcoólicas."
+    },
+    {
+      "id": "hamburgueres",
+      "name": "Hambúrgueres",
+      "order": 11,
+      "description": "Novidades da formaggi",
+      "highlightType": "new"
     }
   ],
   "products": [
@@ -2445,6 +2452,62 @@
       "portion": "Porção",
       "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/novo-produto-1789345747951.jpg",
       "imageAlt": "Ravioli(Carne ou Queijo)",
+      "available": true
+    },
+    {
+      "id": "blend-ranche",
+      "slug": "blend-ranche",
+      "name": "Blend Ranche",
+      "categoryId": "hamburgueres",
+      "order": 1,
+      "shortDescription": "Blend 150g,Queijo mussarelas, Salada de tomate e rucula, pão francês selado na manteiga",
+      "description": "Blend 150g,Queijo mussarelas, Salada de tomate e rucula, pão francês selado na manteiga",
+      "price": 39.9,
+      "portion": "Porção",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/novo-produto-1789851068057.jpg",
+      "imageAlt": "Blend Ranche",
+      "available": true
+    },
+    {
+      "id": "blend-churri",
+      "slug": "blend-churri",
+      "name": "Blend churri",
+      "categoryId": "hamburgueres",
+      "order": 2,
+      "shortDescription": "Blend 150g,Queijo mussarelas, Geleia artesanal de pimenta ,Chimichurri artesanal, bacon artesanal, Pão francê",
+      "description": "Blend 150g,Queijo mussarelas, Geleia artesanal de pimenta ,Chimichurri artesanal, bacon artesanal, Pão francê",
+      "price": 49.9,
+      "portion": "Porção",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/novo-produto-1789851154689.jpg",
+      "imageAlt": "Blend churri",
+      "available": true
+    },
+    {
+      "id": "blend-brie",
+      "slug": "blend-brie",
+      "name": "Blend brie",
+      "categoryId": "hamburgueres",
+      "order": 3,
+      "shortDescription": "Blend 150g,Queijo Brei, Cebola caramelizada na cerveja preta, bacon artesanal, tomate e rúcula, pão francês",
+      "description": "Blend 150g,Queijo Brei, Cebola caramelizada na cerveja preta, bacon artesanal, tomate e rúcula, pão francês",
+      "price": 49.9,
+      "portion": "Porção",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/novo-produto-1789851240118.jpg",
+      "imageAlt": "Blend brie",
+      "available": true
+    },
+    {
+      "id": "blend-cheddar",
+      "slug": "blend-cheddar",
+      "name": "blend cheddar",
+      "categoryId": "hamburgueres",
+      "order": 4,
+      "shortDescription": "Blend 150g,Queijo Cheddar cremoso, Cebola caramelizada na cerveja preta, Bacon artesanal no pão francês selado na manteiga",
+      "description": "Blend 150g,Queijo Cheddar cremoso, Cebola caramelizada na cerveja preta, Bacon artesanal no pão francês selado na manteiga",
+      "price": 49.9,
+      "portion": "Porção",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/novo-produto-1789851311182.jpg",
+      "imageAlt": "blend cheddar",
       "available": true
     }
   ]
