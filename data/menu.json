@@ -919,7 +919,7 @@
       "portion": "Pizza",
       "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/pizza-cogumelos-1788736646416.jpg",
       "imageAlt": "Cogumelos",
-      "available": true
+      "available": false
     },
     {
       "id": "pizza-atum",
@@ -975,7 +975,7 @@
       "portion": "Pizza",
       "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/pizza-frango-bacon-cheddar-1786575040070.jpg",
       "imageAlt": "Frango Bacon Cheddar",
-      "available": true
+      "available": false
     },
     {
       "id": "pizza-palmito-tomate-seco",
@@ -1017,7 +1017,7 @@
       "portion": "Pizza",
       "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/pizza-peito-peru-1785975916935.jpg",
       "imageAlt": "Peito de Perú",
-      "available": true
+      "available": false
     },
     {
       "id": "calzone-frango",
