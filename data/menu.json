@@ -2457,7 +2457,7 @@
     {
       "id": "blend-ranche",
       "slug": "blend-ranche",
-      "name": "Blend Ranche",
+      "name": "X salada",
       "categoryId": "hamburgueres",
       "order": 1,
       "shortDescription": "Blend 150g,Queijo mussarelas, Salada de tomate e rucula, pão francês selado na manteiga",
@@ -2465,7 +2465,7 @@
       "price": 39.9,
       "portion": "Porção",
       "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/novo-produto-1789851068057.jpg",
-      "imageAlt": "Blend Ranche",
+      "imageAlt": "X salada",
       "available": true
     },
     {
