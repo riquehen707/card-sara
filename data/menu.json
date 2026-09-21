@@ -1239,7 +1239,7 @@
       "description": "Whisky, xarope de açúcar, xarope de limão siciliano, suco de limão siciliano e chá de pêssego.",
       "price": 34.9,
       "portion": "Drink",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/scotch-e-tea-1789951894061.jpg",
       "imageAlt": "Scotch e Tea",
       "available": true
     },
@@ -1365,7 +1365,7 @@
       "description": "Vodka, xarope de gengibre, sumo de limão e espuma de gengibre.",
       "price": 29.9,
       "portion": "Drink",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/moscow-mule-1789951794558.jpg",
       "imageAlt": "Moscow Mule",
       "available": true
     },
