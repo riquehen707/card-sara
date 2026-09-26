@@ -2296,7 +2296,7 @@
       "description": "Molho de tomate pomodoro, queijo mozzarella, salmão, geleia de maracujá ou molho teriyaki, orégano",
       "price": 94.9,
       "portion": "Porção",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/salmao-1790460934953.jpg",
       "imageAlt": "Salmão",
       "available": true
     },
