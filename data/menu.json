@@ -1197,7 +1197,7 @@
       "description": "Milkshake.",
       "price": 29.9,
       "portion": "Porção",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/milkshake-1790387147764.jpg",
       "imageAlt": "Milkshake",
       "available": true
     },
