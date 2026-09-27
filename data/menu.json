@@ -1157,7 +1157,7 @@
       "portion": "Porção",
       "imageUrl": "/mock/placeholder.svg",
       "imageAlt": "Ambrosia",
-      "available": true
+      "available": false
     },
     {
       "id": "pudim",
