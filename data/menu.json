@@ -1225,7 +1225,7 @@
       "description": "Gin, Campari e Martini.",
       "price": 34.9,
       "portion": "Drink",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/negroni-1790897176403.jpg",
       "imageAlt": "Negroni",
       "available": true
     },
