@@ -1239,7 +1239,7 @@
       "description": "Whisky, xarope de açúcar, xarope de limão siciliano, suco de limão siciliano e chá de pêssego.",
       "price": 34.9,
       "portion": "Drink",
-      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/scotch-e-tea-1789951894061.jpg",
+      "imageUrl": "/mock/placeholder.svg",
       "imageAlt": "Scotch e Tea",
       "available": true
     },
@@ -1309,7 +1309,7 @@
       "description": "Suco de laranja, vodka e xarope de framboesa.",
       "price": 29.9,
       "portion": "Drink",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/sexy-on-the-beach-1790897266923.jpg",
       "imageAlt": "Sexy On The Beach",
       "available": true
     },
