@@ -2551,6 +2551,20 @@
       "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/costelinha-de-porco-1789936789843.jpg",
       "imageAlt": "Costelinha de porco",
       "available": true
+    },
+    {
+      "id": "camarao-capotado",
+      "slug": "camarao-capotado",
+      "name": "Camarão capotado",
+      "categoryId": "entradas",
+      "order": 25,
+      "shortDescription": "camarão com catupiry empanado.",
+      "description": "camarão com catupiry empanado.",
+      "price": 79.9,
+      "portion": "Porção",
+      "imageUrl": "/mock/placeholder.svg",
+      "imageAlt": "Camarão capotado",
+      "available": true
     }
   ]
 }
