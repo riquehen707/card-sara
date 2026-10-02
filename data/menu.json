@@ -2562,7 +2562,7 @@
       "description": "camarão com catupiry empanado.",
       "price": 79.9,
       "portion": "Porção",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/camarao-capotado-1790900964877.jpg",
       "imageAlt": "Camarão capotado",
       "available": true
     }
