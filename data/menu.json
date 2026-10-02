@@ -1267,7 +1267,7 @@
       "description": "Caipirinha. Sabores: limão, maracujá ou morango.",
       "price": 19.9,
       "portion": "Drink",
-      "imageUrl": "/mock/placeholder.svg",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/caipirinha-1790901028493.jpg",
       "imageAlt": "Caipirinha",
       "available": true
     },
