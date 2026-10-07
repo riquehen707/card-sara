@@ -723,7 +723,7 @@
       "portion": "Pizza",
       "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/pizza-salame-1788643613529.jpg",
       "imageAlt": "Salame",
-      "available": true
+      "available": false
     },
     {
       "id": "pizza-caprese",
@@ -803,7 +803,7 @@
       "order": 9,
       "shortDescription": "Molho de tomate pomodoro, queijo muzzarella, carne seca, banana da terra, catupiry e orégano.",
       "description": "Molho de tomate pomodoro, queijo muzzarella, carne seca, banana da terra, catupiry e orégano.",
-      "price": 89.9,
+      "price": 99.9,
       "portion": "Pizza",
       "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/pizza-carne-seca-1785105400754.jpg",
       "imageAlt": "Carne Seca",
