@@ -737,7 +737,7 @@
       "portion": "Pizza",
       "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/pizza-caprese-1786839191203.jpg",
       "imageAlt": "Caprese",
-      "available": false
+      "available": true
     },
     {
       "id": "pizza-parma-tomate-seco",
@@ -831,7 +831,7 @@
       "order": 11,
       "shortDescription": "Molho de tomate pomodoro, queijo muzzarella, camarão, pesto de manjericão e orégano.",
       "description": "Molho de tomate pomodoro, queijo muzzarella, camarão, pesto de manjericão e orégano.",
-      "price": 119.9,
+      "price": 109.9,
       "portion": "Pizza",
       "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/pizza-camarao-pesto-1785103664285.jpg",
       "imageAlt": "Camarão ao Molho Pesto",
@@ -845,7 +845,7 @@
       "order": 12,
       "shortDescription": "Molho de tomate pomodoro, queijo muzzarella, camarão, catupiry e orégano.",
       "description": "Molho de tomate pomodoro, queijo muzzarella, camarão, catupiry e orégano.",
-      "price": 119.9,
+      "price": 109.9,
       "portion": "Pizza",
       "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/pizza-camarao-catupiry-1785103713884.jpg",
       "imageAlt": "Camarão com Catupiry",
