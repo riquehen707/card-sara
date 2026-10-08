@@ -723,7 +723,7 @@
       "portion": "Pizza",
       "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/pizza-salame-1788643613529.jpg",
       "imageAlt": "Salame",
-      "available": false
+      "available": true
     },
     {
       "id": "pizza-caprese",
@@ -947,7 +947,7 @@
       "portion": "Pizza",
       "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/pizza-frango-1785538562693.jpg",
       "imageAlt": "Frango",
-      "available": false
+      "available": true
     },
     {
       "id": "pizza-frango-catupiry",
@@ -989,7 +989,7 @@
       "portion": "Pizza",
       "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/pizza-palmito-tomate-seco-1785709928289.jpg",
       "imageAlt": "Palmito com Tomate Seco",
-      "available": false
+      "available": true
     },
     {
       "id": "pizza-bacalhau",
