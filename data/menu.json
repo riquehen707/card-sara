@@ -73,6 +73,11 @@
       "name": "Hambúrgueres",
       "order": 11,
       "description": "Novidades da formaggi"
+    },
+    {
+      "id": "combo-do-nosso-hamburguer-artesanal",
+      "name": "Combo do nosso hambúrguer artesanal",
+      "order": 12
     }
   ],
   "products": [
@@ -2577,6 +2582,34 @@
       "portion": "Porção",
       "imageUrl": "/mock/placeholder.svg",
       "imageAlt": "Pão de alho",
+      "available": true
+    },
+    {
+      "id": "combo-brie",
+      "slug": "combo-brie",
+      "name": "combo brie",
+      "categoryId": "combo-do-nosso-hamburguer-artesanal",
+      "order": 1,
+      "shortDescription": "hambúrguer brie, batata e refrigerante .",
+      "description": "hambúrguer brie, batata e refrigerante .",
+      "price": 59.9,
+      "portion": "Porção",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/novo-produto-1791664107534.jpg",
+      "imageAlt": "combo brie",
+      "available": true
+    },
+    {
+      "id": "combo-churri",
+      "slug": "combo-churri",
+      "name": "Combo churri",
+      "categoryId": "combo-do-nosso-hamburguer-artesanal",
+      "order": 2,
+      "shortDescription": "hambúrguer churri ,batata ,refrigerante",
+      "description": "hambúrguer churri ,batata ,refrigerante",
+      "price": 59.9,
+      "portion": "Porção",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/novo-produto-1791664199903.jpg",
+      "imageAlt": "Combo churri",
       "available": true
     }
   ]
