@@ -77,7 +77,8 @@
     {
       "id": "combo-do-nosso-hamburguer-artesanal",
       "name": "Combo do nosso hambúrguer artesanal",
-      "order": 12
+      "order": 12,
+      "highlightType": "promotion"
     }
   ],
   "products": [
