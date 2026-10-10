@@ -2611,6 +2611,20 @@
       "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/novo-produto-1791664199903.jpg",
       "imageAlt": "Combo churri",
       "available": true
+    },
+    {
+      "id": "combo-cheddar",
+      "slug": "combo-cheddar",
+      "name": "Combo cheddar",
+      "categoryId": "combo-do-nosso-hamburguer-artesanal",
+      "order": 3,
+      "shortDescription": "Hambúrguer, batata refrigerante",
+      "description": "Hambúrguer, batata refrigerante",
+      "price": 59.9,
+      "portion": "Porção",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/novo-produto-1791664299169.jpg",
+      "imageAlt": "Combo cheddar",
+      "available": true
     }
   ]
 }
