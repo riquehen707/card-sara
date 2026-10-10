@@ -72,15 +72,7 @@
       "id": "hamburgueres",
       "name": "Hambúrgueres",
       "order": 11,
-      "description": "Novidades da formaggi",
-      "highlightType": "new"
-    },
-    {
-      "id": "combo",
-      "name": "Combo",
-      "order": 12,
-      "description": "Hambúrguer batata frita e refrigerante  ",
-      "highlightType": "promotion"
+      "description": "Novidades da formaggi"
     }
   ],
   "products": [
@@ -2515,8 +2507,7 @@
       "portion": "Porção",
       "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/novo-produto-1789851311182.jpg",
       "imageAlt": "blend cheddar",
-      "available": true,
-      "highlightType": "featured"
+      "available": true
     },
     {
       "id": "iscas-de-alcatra",
