@@ -2625,6 +2625,20 @@
       "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/novo-produto-1791664299169.jpg",
       "imageAlt": "Combo cheddar",
       "available": true
+    },
+    {
+      "id": "xsalada",
+      "slug": "xsalada",
+      "name": "Xsalada",
+      "categoryId": "combo-do-nosso-hamburguer-artesanal",
+      "order": 4,
+      "shortDescription": "hambúrguer xsalada,batata, refrigerante.",
+      "description": "hambúrguer xsalada,batata, refrigerante.",
+      "price": 49.9,
+      "portion": "Porção",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/novo-produto-1791664356937.jpg",
+      "imageAlt": "Xsalada",
+      "available": true
     }
   ]
 }
