@@ -2587,7 +2587,7 @@
     {
       "id": "combo-brie",
       "slug": "combo-brie",
-      "name": "combo brie",
+      "name": "Combo brie",
       "categoryId": "combo-do-nosso-hamburguer-artesanal",
       "order": 1,
       "shortDescription": "hambúrguer brie, batata e refrigerante .",
@@ -2595,7 +2595,7 @@
       "price": 59.9,
       "portion": "Porção",
       "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/novo-produto-1791664107534.jpg",
-      "imageAlt": "combo brie",
+      "imageAlt": "Combo brie",
       "available": true
     },
     {
