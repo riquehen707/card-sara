@@ -994,7 +994,7 @@
       "portion": "Pizza",
       "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/pizza-palmito-tomate-seco-1785709928289.jpg",
       "imageAlt": "Palmito com Tomate Seco",
-      "available": true
+      "available": false
     },
     {
       "id": "pizza-bacalhau",
