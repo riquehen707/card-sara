@@ -2640,6 +2640,20 @@
       "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/novo-produto-1791664356937.jpg",
       "imageAlt": "Xsalada",
       "available": true
+    },
+    {
+      "id": "corona-600ml",
+      "slug": "corona-600ml",
+      "name": "Corona 600ml",
+      "categoryId": "cervejas",
+      "order": 21,
+      "shortDescription": "Corona 600ml",
+      "description": "Corona 600ml",
+      "price": 19.9,
+      "portion": "Porção",
+      "imageUrl": "https://raw.githubusercontent.com/riquehen707/card-sara/master/public/products/novo-produto-1795722754191.jpg",
+      "imageAlt": "Corona 600ml",
+      "available": true
     }
   ]
 }
